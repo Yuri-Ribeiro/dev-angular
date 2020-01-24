@@ -7,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateProductComponent } from './products/create-product/create-product.component';
 import { HomeComponent } from './products/home/home.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './products/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

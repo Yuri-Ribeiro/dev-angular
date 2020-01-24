@@ -1,1 +1,15 @@
-<p>create-product works!</p>
+<h3>Novo produto</h3>
+
+<form >
+    <div>
+        <label>Nome:</label>
+        <input type="text" name="name" [(ngModel)]='req.name'>
+    </div>
+    <div>
+        <label for="price">Preço:</label>
+        <input type="text" name="price" [(ngModel)]='req.price'>
+    </div>
+    <div>
+        <button (click)="save()">Salvar</button>
+    </div>
+</form>

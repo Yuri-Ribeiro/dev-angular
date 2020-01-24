@@ -7,3 +7,8 @@ export interface Product {
 export interface ResponseProducts {
     products: Product[]
 }
+
+export interface RequestCreate {
+    name: string
+    price: number
+}

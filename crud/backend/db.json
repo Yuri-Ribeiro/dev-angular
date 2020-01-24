@@ -1,5 +1,5 @@
 {
-"products": [
+  "products": [
     {
       "id": 1,
       "name": "Hambúrguer",
@@ -29,6 +29,11 @@
       "id": 6,
       "name": "Coca cola 600ml",
       "price": 7.5
+    },
+    {
+      "name": "teste",
+      "price": "5",
+      "id": 7
     }
   ]
 }
