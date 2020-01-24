@@ -1,0 +1,21 @@
+<h3>Deseja apagar esse produto?</h3>
+
+<div *ngIf="product">
+    <div>
+        <label>Id:
+            <strong>{{product.id}}</strong>
+        </label>
+    </div>
+    <div>
+        <label>Nome:
+            <strong>{{product.name}}</strong>
+        </label>
+    </div>
+    <div>
+        <label>Sobrenome:
+            <strong>{{product.price}}</strong>
+        </label>
+    </div>
+    <button (click)="delete()">Apagar</button>
+    <button (click)="cancel()">Cancelar</button>
+</div>
