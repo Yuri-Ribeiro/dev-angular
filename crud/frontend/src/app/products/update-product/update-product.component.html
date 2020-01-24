@@ -1,0 +1,16 @@
+<h3>Atualizar produto</h3>
+
+<form *ngIf="req">
+    <div>
+        <label>Nome:</label>
+        <input type="text" name="name" [(ngModel)]='req.name'>
+    </div>
+    <div>
+        <label for="price">Preço:</label>
+        <input type="text" name="price" [(ngModel)]='req.price'>
+    </div>
+    <div>
+        <button (click)="update()">Alterar</button>
+        <button (click)="cancel()">Cancelar</button>
+    </div>
+</form>

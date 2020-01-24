@@ -7,12 +7,12 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   createProduct() {
-    this.route.navigate(['products/create'])
+    this.router.navigate(['/products/create'])
   }
 }

@@ -1,9 +1,9 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "Hambúrguer",
-      "price": 8.5
+      "price": "7",
+      "id": 1
     },
     {
       "id": 2,
@@ -16,14 +16,14 @@
       "price": 12.5
     },
     {
-      "id": 4,
       "name": "X-Tudo",
-      "price": 14.5
+      "price": "14.5",
+      "id": 4
     },
     {
-      "id": 5,
       "name": "Coca cola 350ml",
-      "price": 5.5
+      "price": 5.5,
+      "id": 5
     },
     {
       "id": 6,
@@ -31,9 +31,19 @@
       "price": 7.5
     },
     {
-      "name": "teste",
+      "name": "Pastel",
       "price": "5",
       "id": 7
+    },
+    {
+      "name": "Milk Shake",
+      "price": "11.5",
+      "id": 8
+    },
+    {
+      "name": "Picolé",
+      "price": "3.5",
+      "id": 9
     }
   ]
 }

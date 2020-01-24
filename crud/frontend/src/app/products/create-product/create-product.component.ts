@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RequestCreate } from '../product.model';
+import { RequestProduct } from '../product.model';
 import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'crud-create-product',
@@ -9,9 +10,9 @@ import { ProductService } from '../product.service';
 })
 export class CreateProductComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private router: Router) { }
 
-  req: RequestCreate = {
+  req: RequestProduct = {
     name: '',
     price: null
   }
@@ -20,8 +21,9 @@ export class CreateProductComponent implements OnInit {
   }
 
   save() {
-    this.productService.createUser(this.req).subscribe(res => {
+    this.productService.createProduct(this.req).subscribe(res => {
       alert("Produto salvo com sucesso!")
+      this.router.navigate(['/'])
     })
   }
 
