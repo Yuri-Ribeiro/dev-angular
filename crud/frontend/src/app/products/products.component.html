@@ -1,0 +1,15 @@
+<table>
+    <thead>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Preço</td>
+        <td>Ações</td>
+    </thead>
+    <tbody *ngIf='responseProducts'>
+        <tr *ngFor='let product of responseProducts'>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
