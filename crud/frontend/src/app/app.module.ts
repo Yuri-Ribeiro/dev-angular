@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './products/read-product/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateProductComponent } from './products/create-product/create-product.component';
-import { HomeComponent } from './products/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { FormsModule } from "@angular/forms";
 import { UpdateProductComponent } from './products/update-product/update-product.component';
 import { DeleteProductComponent } from './products/delete-product/delete-product.component';

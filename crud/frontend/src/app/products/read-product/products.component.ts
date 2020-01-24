@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponseProducts } from './product.model';
-import { ProductService } from './product.service';
+import { Product } from '../product.model';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'crud-products',
@@ -11,7 +11,7 @@ export class ProductsComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
 
-  responseProducts: ResponseProducts
+  responseProducts: Product[]
 
   ngOnInit() {
     this.productService.getProducts().subscribe(res => {
