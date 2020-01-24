@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from "@angular/forms";
 import { UpdateProductComponent } from './products/update-product/update-product.component';
 import { DeleteProductComponent } from './products/delete-product/delete-product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DeleteProductComponent } from './products/delete-product/delete-product
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
