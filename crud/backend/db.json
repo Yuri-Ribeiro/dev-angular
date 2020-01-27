@@ -11,19 +11,14 @@
       "price": 10.5
     },
     {
-      "id": 3,
       "name": "X-Bacon",
-      "price": 12.5
+      "price": 12.5,
+      "id": 3
     },
     {
       "name": "X-Tudo",
       "price": "14.5",
       "id": 4
-    },
-    {
-      "name": "Coca cola 350ml",
-      "price": 5.5,
-      "id": 5
     },
     {
       "id": 6,
@@ -39,11 +34,6 @@
       "name": "Milk Shake",
       "price": "11.5",
       "id": 8
-    },
-    {
-      "name": "Picolé",
-      "price": "3.5",
-      "id": 9
     }
   ]
 }

@@ -11,6 +11,9 @@ import { FormsModule } from "@angular/forms";
 import { UpdateProductComponent } from './products/update-product/update-product.component';
 import { DeleteProductComponent } from './products/delete-product/delete-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
+  MatSortModule, MatTableModule } from "@angular/material";
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
