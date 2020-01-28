@@ -11,8 +11,8 @@ import { FormsModule } from "@angular/forms";
 import { UpdateProductComponent } from './products/update-product/update-product.component';
 import { DeleteProductComponent } from './products/delete-product/delete-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule, MatButtonModule, MatToolbarModule} from "@angular/material";
+import { MatPaginatorModule, MatProgressSpinnerModule, 
+  MatSortModule, MatTableModule, MatButtonModule, MatToolbarModule, MatInputModule, MatCardModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
     MatSortModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

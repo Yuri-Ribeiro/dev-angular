@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'crud-update-product',
   templateUrl: './update-product.component.html',
+  styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
 

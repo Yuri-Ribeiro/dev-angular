@@ -1,16 +1,14 @@
-<h3>Atualizar produto</h3>
-
-<form *ngIf="req">
-    <div>
-        <label>Nome:</label>
-        <input type="text" name="name" [(ngModel)]='req.name'>
-    </div>
-    <div>
-        <label for="price">Preço:</label>
-        <input type="text" name="price" [(ngModel)]='req.price'>
-    </div>
-    <div>
-        <button type="button" (click)="update()">Alterar</button>
-        <button type="button" (click)="cancel()">Cancelar</button>
-    </div>
-</form>
+<mat-card>
+    <mat-card-title>Atualizar produto</mat-card-title>
+    <form *ngIf="req" class="product-form">
+        <mat-form-field class="product-full-width">
+          <input matInput placeholder="Nome" name="name" [(ngModel)]='req.name'>
+        </mat-form-field>
+      
+        <mat-form-field class="product-full-width">
+          <input matInput placeholder="Preço"  name="price" [(ngModel)]='req.price'>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="update()">Salvar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>

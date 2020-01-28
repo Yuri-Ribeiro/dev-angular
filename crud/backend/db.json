@@ -34,6 +34,16 @@
       "name": "Milk Shake",
       "price": "11.5",
       "id": 8
+    },
+    {
+      "name": "2x Milk Shake + Batata",
+      "price": "35.6",
+      "id": 9
+    },
+    {
+      "name": "Milk Shake + Batata",
+      "price": "15.9",
+      "id": 11
     }
   ]
 }
