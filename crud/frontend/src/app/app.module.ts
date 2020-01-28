@@ -12,8 +12,7 @@ import { UpdateProductComponent } from './products/update-product/update-product
 import { DeleteProductComponent } from './products/delete-product/delete-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule } from "@angular/material";
-
+  MatSortModule, MatTableModule, MatButtonModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -34,7 +33,8 @@ import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
