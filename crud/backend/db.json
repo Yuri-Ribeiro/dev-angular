@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "name": "Hambúrguer",
-      "price": "8",
-      "id": 1
-    },
-    {
       "id": 2,
       "name": "X-Búrguer",
       "price": 10.5
@@ -21,13 +16,13 @@
       "id": 4
     },
     {
-      "id": 6,
       "name": "Coca cola 600ml",
-      "price": 7.5
+      "price": "5",
+      "id": 6
     },
     {
       "name": "Pastel",
-      "price": "5",
+      "price": "3",
       "id": 7
     },
     {
@@ -44,6 +39,11 @@
       "name": "Milk Shake + Batata",
       "price": "15.9",
       "id": 11
+    },
+    {
+      "name": "Sorvete",
+      "price": "4.5",
+      "id": 12
     }
   ]
 }

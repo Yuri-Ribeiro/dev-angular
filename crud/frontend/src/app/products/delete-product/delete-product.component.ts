@@ -6,6 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'crud-delete-product',
   templateUrl: './delete-product.component.html',
+  styleUrls: ['./delete-product.component.css']
 })
 export class DeleteProductComponent implements OnInit {
 

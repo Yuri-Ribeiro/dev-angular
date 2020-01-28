@@ -1,4 +1,4 @@
-<h3>Deseja apagar esse produto?</h3>
+<!-- <h3>Deseja apagar esse produto?</h3>
 
 <div *ngIf="product">
     <div>
@@ -18,4 +18,26 @@
     </div>
     <button type="button" (click)="delete()">Apagar</button>
     <button type="button" (click)="cancel()">Cancelar</button>
-</div>
+</div> -->
+
+<mat-card>
+    <mat-card-title>Deseja apagar esse produto?</mat-card-title>
+    <!-- <mat-card-content>
+      
+    </mat-card-content> -->
+    <form *ngIf="product" class="product-form">
+        <mat-form-field class="product-full-width">
+            <input matInput placeholder="ID" name="id" value='{{product.id}}' disabled>
+          </mat-form-field>
+
+        <mat-form-field class="product-full-width">
+          <input matInput placeholder="Nome" name="name" value='{{product.name}}' disabled>
+        </mat-form-field>
+      
+        <mat-form-field class="product-full-width">
+          <input matInput placeholder="Preço"  name="price" value='{{product.price | currency:"BRL"}}' disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="delete()" color="warn">Apagar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>

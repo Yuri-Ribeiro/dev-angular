@@ -9,5 +9,6 @@
           <input matInput placeholder="Preço"  name="price" [(ngModel)]='req.price'>
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="save()">Salvar</button>
+    <button mat-raised-button (click)="save()" color="primary">Salvar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
 </mat-card>
