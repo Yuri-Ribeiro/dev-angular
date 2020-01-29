@@ -1,7 +1,5 @@
 <mat-toolbar color="warn">
-    <a routerLink="/">Cadastro de produtos</a> 
+    <a routerLink="/products">Cadastro de produtos</a> 
 </mat-toolbar>
 
-<button mat-raised-button (click)="createProduct()"> Novo produto </button>
-
-<crud-product-read></crud-product-read>
+<router-outlet></router-outlet>

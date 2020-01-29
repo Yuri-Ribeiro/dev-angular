@@ -11,6 +11,7 @@ import { ProductReadComponent } from './product-read/product-read.component';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
+import { ProductCrudHomepageComponent } from './product-crud-homepage/product-crud-homepage.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
     ProductReadComponent,
     ProductCreateComponent,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    ProductCrudHomepageComponent
   ],
   imports: [
     CommonModule,

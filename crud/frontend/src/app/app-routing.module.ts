@@ -7,7 +7,7 @@ import { ProductUpdateComponent } from './product-crud/product-update/product-up
 import { ProductDeleteComponent } from './product-crud/product-delete/product-delete.component';
 
 const routes: Routes = [
-  {path: "", redirectTo: "/home", pathMatch: "full"}, //perguntar se boa prática
+  {path: "", redirectTo: "/home", pathMatch: "full"},
   {path: "home", component: HomeComponent},
 ];
 

@@ -6,15 +6,17 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatCardModule, MatToolbarModule, MatSidenavModule } from '@angular/material/';
+import { MatCardModule, MatToolbarModule, MatSidenavModule, MatButtonToggleModule } from '@angular/material/';
 
 import { HomeComponent } from './home/home.component';
 import { ProductCrudModule } from './product-crud/product-crud.module';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { ProductCrudModule } from './product-crud/product-crud.module';
     MatToolbarModule,
     MatSidenavModule,
     ProductCrudModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
