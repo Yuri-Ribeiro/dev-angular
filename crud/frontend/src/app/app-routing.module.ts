@@ -9,10 +9,6 @@ import { ProductDeleteComponent } from './product-crud/product-delete/product-de
 const routes: Routes = [
   {path: "", redirectTo: "/home", pathMatch: "full"}, //perguntar se boa prática
   {path: "home", component: HomeComponent},
-  {path: 'products', component: ProductCrudComponent},
-  {path: "products/create", component: ProductCreateComponent},
-  {path: "products/update/:id", component: ProductUpdateComponent},
-  {path: "products/delete/:id", component: ProductDeleteComponent},
 ];
 
 @NgModule({

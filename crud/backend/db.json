@@ -1,9 +1,9 @@
 {
   "products": [
     {
-      "id": 2,
       "name": "X-Búrguer",
-      "price": 10.5
+      "price": 10.5,
+      "id": 2
     },
     {
       "name": "X-Bacon",
@@ -47,7 +47,7 @@
     },
     {
       "name": "teste",
-      "price": null,
+      "price": "12",
       "id": 13
     }
   ]

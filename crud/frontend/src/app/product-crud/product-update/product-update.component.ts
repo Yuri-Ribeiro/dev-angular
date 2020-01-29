@@ -29,12 +29,12 @@ export class ProductUpdateComponent implements OnInit {
   update() {
     this.productService.updateProduct(this.id, this.req).subscribe(res => {
       alert("Produto alterado com sucesso")
-      this.router.navigate(['/'])
+      this.router.navigate(['/products'])
     })
   }
 
   cancel() {
-    this.router.navigate(['/'])
+    this.router.navigate(['/products'])
   }
 
 }
