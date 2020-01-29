@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ListProductsComponent } from './products/list-products/list-products.component';
-import { CreateProductComponent } from './products/create-product/create-product.component';
-import { UpdateProductComponent } from './products/update-product/update-product.component';
-import { DeleteProductComponent } from './products/delete-product/delete-product.component';
-
+import { ProductCrudComponent } from './product-crud/product-crud.component';
+import { ProductCreateComponent } from './product-crud/product-create/product-create.component';
+import { ProductUpdateComponent } from './product-crud/product-update/product-update.component';
+import { ProductDeleteComponent } from './product-crud/product-delete/product-delete.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "/home", pathMatch: "full"}, //perguntar se boa prática
   {path: "home", component: HomeComponent},
-  {path: 'products', component: ListProductsComponent},
-  {path: "products/create", component: CreateProductComponent},
-  {path: "products/update/:id", component: UpdateProductComponent},
-  {path: "products/delete/:id", component: DeleteProductComponent},
+  {path: 'products', component: ProductCrudComponent},
+  {path: "products/create", component: ProductCreateComponent},
+  {path: "products/update/:id", component: ProductUpdateComponent},
+  {path: "products/delete/:id", component: ProductDeleteComponent},
 ];
 
 @NgModule({

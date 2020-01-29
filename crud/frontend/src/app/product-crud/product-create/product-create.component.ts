@@ -4,11 +4,11 @@ import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'crud-create-product',
-  templateUrl: './create-product.component.html',
-  styleUrls: ['create-product.component.css']
+  selector: 'crud-product-create',
+  templateUrl: './product-create.component.html',
+  styleUrls: ['product-create.component.css']
 })
-export class CreateProductComponent implements OnInit {
+export class ProductCreateComponent implements OnInit {
 
   constructor(private productService: ProductService, private router: Router) { }
 

@@ -4,11 +4,11 @@ import { ProductService } from '../product.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'crud-delete-product',
-  templateUrl: './delete-product.component.html',
-  styleUrls: ['./delete-product.component.css']
+  selector: 'crud-product-delete',
+  templateUrl: './product-delete.component.html',
+  styleUrls: ['./product-delete.component.css']
 })
-export class DeleteProductComponent implements OnInit {
+export class ProductDeleteComponent implements OnInit {
 
   id: string
   product: Product

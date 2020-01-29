@@ -3,11 +3,11 @@ import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 
 @Component({
-  selector: 'crud-products',
-  templateUrl: './products.component.html',
-  styleUrls:  ['./products.component.css']
+  selector: 'crud-product-read',
+  templateUrl: './product-read.component.html',
+  styleUrls:  ['./product-read.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductReadComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
 

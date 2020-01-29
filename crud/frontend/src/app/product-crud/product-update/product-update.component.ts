@@ -4,11 +4,11 @@ import { ProductService } from '../product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'crud-update-product',
-  templateUrl: './update-product.component.html',
-  styleUrls: ['./update-product.component.css']
+  selector: 'crud-product-update',
+  templateUrl: './product-update.component.html',
+  styleUrls: ['./product-update.component.css']
 })
-export class UpdateProductComponent implements OnInit {
+export class ProductUpdateComponent implements OnInit {
 
   id: string
   req: RequestProduct
