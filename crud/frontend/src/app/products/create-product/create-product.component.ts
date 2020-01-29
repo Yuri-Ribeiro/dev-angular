@@ -23,12 +23,12 @@ export class CreateProductComponent implements OnInit {
   save() {
     this.productService.createProduct(this.req).subscribe(res => {
       alert("Produto salvo com sucesso!")
-      this.router.navigate(['/'])
+      this.router.navigate(['/products'])
     })
   }
 
   cancel() {
-    this.router.navigate(['/'])
+    this.router.navigate(['/products'])
   }
 
 }
