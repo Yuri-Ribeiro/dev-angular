@@ -1,8 +1,16 @@
-<mat-drawer-container>
-    <mat-drawer mode="side" opened>
-        <crud-nav></crud-nav>
-    </mat-drawer>
-    <mat-drawer-content>
+<ng-container class="container">  
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav mode="side" opened class="sidenav"
+                   [fixedInViewport]="true" [fixedTopGap]="0"
+                   [fixedBottomGap]="64">
+            <crud-nav></crud-nav>
+      </mat-sidenav>
+  
+      <mat-sidenav-content>
         <router-outlet></router-outlet>
-    </mat-drawer-content>
-</mat-drawer-container>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  
+    <mat-toolbar class="footer">Footer</mat-toolbar>
+</ng-container>
+  

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatCardModule, MatToolbarModule, MatSidenavModule, MatButtonToggleModule } from '@angular/material/';
+import { MatCardModule, MatToolbarModule, MatSidenavModule, MatButtonToggleModule, MatListModule } from '@angular/material/';
 
 import { HomeComponent } from './home/home.component';
 import { ProductCrudModule } from './product-crud/product-crud.module';
@@ -27,7 +27,8 @@ import { NavComponent } from './nav/nav.component';
     MatToolbarModule,
     MatSidenavModule,
     ProductCrudModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
