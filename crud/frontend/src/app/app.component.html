@@ -1,16 +1,11 @@
 <ng-container class="container">  
-    <mat-sidenav-container>
-      <mat-sidenav #sidenav mode="side" opened class="sidenav"
-                   [fixedInViewport]="true" [fixedTopGap]="0"
-                   [fixedBottomGap]="64">
-            <crud-nav></crud-nav>
-      </mat-sidenav>
+    <crud-nav></crud-nav>
   
-      <mat-sidenav-content>
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  
-    <mat-toolbar class="footer">Footer</mat-toolbar>
+    <mat-toolbar class="footer">
+        <span>
+            Desenvolvido com <i className="fa fa-heart text-danger"></i> por
+            <strong> Cod<span className="text-danger">3</span>r</strong>
+        </span>
+    </mat-toolbar>
 </ng-container>
   
