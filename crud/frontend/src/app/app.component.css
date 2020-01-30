@@ -11,5 +11,10 @@
 }
 
 strong span {
-    color: rgb(227, 94, 107) !important;;
+    color: rgb(227, 94, 107) !important;
+}
+
+.material-icons {
+    color: rgb(227, 94, 107) !important;
+    vertical-align: middle;
 }
