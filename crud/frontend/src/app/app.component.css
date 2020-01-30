@@ -4,3 +4,12 @@
     left: 0;
     right: 0;
 }
+
+.message {
+    position: fixed;
+    right: 16px;
+}
+
+strong span {
+    color: rgb(227, 94, 107) !important;;
+}
