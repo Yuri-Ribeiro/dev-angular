@@ -8,6 +8,7 @@
 .message {
     position: fixed;
     right: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 strong span {
@@ -18,3 +19,4 @@ strong span {
     color: rgb(227, 94, 107) !important;
     vertical-align: middle;
 }
+

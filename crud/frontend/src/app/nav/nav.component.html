@@ -2,9 +2,22 @@
   <mat-sidenav #sidenav mode="side" opened class="sidenav"
                [fixedInViewport]="true" [fixedTopGap]="0"
                [fixedBottomGap]="0">
+    
+    <mat-card class="logo-card">
+      <a class="logo" routerLink="/">
+        <img src="assets/img/logo.png">
+      </a>
+    </mat-card>
+
     <mat-nav-list class="nav-list">
-      <a mat-list-item routerLink="/">Inicio</a>
-      <a mat-list-item routerLink="/products">Produtos</a>
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Início
+      </a>
+      <a mat-list-item routerLink="/products">
+        <i class="material-icons">storefront</i>
+        Produtos
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
