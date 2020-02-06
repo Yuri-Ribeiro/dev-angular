@@ -6,3 +6,7 @@ a {
 i {
     margin: 16px 8px;
 }
+
+.crud-content {
+    height: 100%;
+}
