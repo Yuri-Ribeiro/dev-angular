@@ -1,6 +1,16 @@
-.header-message {
+.header {
     position: fixed;
-    left: 215px;
+    top: 0;
+    left: 200px;
+    right: 0;
+    z-index: 2;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer-message {
@@ -16,18 +26,4 @@ strong span {
 .material-icons {
     color: rgb(227, 94, 107) !important;
     vertical-align: middle;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
