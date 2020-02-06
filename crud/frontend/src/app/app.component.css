@@ -1,4 +1,9 @@
-.message {
+.header-message {
+    position: fixed;
+    left: 215px;
+}
+
+.footer-message {
     position: fixed;
     right: 16px;
     font-family: 'Montserrat', sans-serif;
