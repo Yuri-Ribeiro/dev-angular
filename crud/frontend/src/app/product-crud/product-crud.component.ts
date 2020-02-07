@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from '../header.service';
 
 @Component({
   selector: 'crud-product-crud',
@@ -10,6 +11,7 @@ export class ProductCrudComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    HeaderService.mudouNome("Produtos")
   }
 
 }
