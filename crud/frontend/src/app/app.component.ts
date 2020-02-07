@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderService } from './header.service';
 
 @Component({
@@ -10,14 +10,11 @@ import { HeaderService } from './header.service';
 export class AppComponent {
   title = "Crud";
 
-  constructor(private cdRef:ChangeDetectorRef) { }
+  constructor() { }
 
-  ngAfterViewChecked() {
+  ngOnInit() {
     HeaderService.forwardTheHeader.subscribe(
-      title => this.title = title
-      // nome => setTimeout (() => this.title = nome, 0)
+      async title => this.title = await title
     );
-    // Executar a detecção de alterações explicitamente após a alteração
-    this.cdRef.detectChanges();
   }
 }
