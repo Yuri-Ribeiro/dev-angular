@@ -5,11 +5,11 @@ import { Injectable, EventEmitter } from '@angular/core';
 })
 export class HeaderService {
 
-  static forwardTheHeader = new EventEmitter<string>()
+  static forwardTheHeader = new EventEmitter<Object>()
 
   constructor() { }
 
-  static changedTheName(name: string){
-    HeaderService.forwardTheHeader.emit(name)
+  static changedTheName(data: Object){
+    HeaderService.forwardTheHeader.emit(data)
   }
 }

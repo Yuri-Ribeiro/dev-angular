@@ -5,3 +5,13 @@
     right: 0;
     z-index: 2;
 }
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+i {
+    margin: auto 8px;
+    /* vertical-align: middle; */
+}
