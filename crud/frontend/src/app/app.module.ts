@@ -11,12 +11,14 @@ import { MatCardModule, MatToolbarModule, MatSidenavModule, MatButtonToggleModul
 import { HomeComponent } from './home/home.component';
 import { ProductCrudModule } from './product-crud/product-crud.module';
 import { NavComponent } from './nav/nav.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

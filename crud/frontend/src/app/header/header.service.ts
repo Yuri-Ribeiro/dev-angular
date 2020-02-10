@@ -9,7 +9,7 @@ export class HeaderService {
 
   constructor() { }
 
-  static mudouNome(nome: string){
-    HeaderService.forwardTheHeader.emit(nome)
+  static changedTheName(name: string){
+    HeaderService.forwardTheHeader.emit(name)
   }
 }

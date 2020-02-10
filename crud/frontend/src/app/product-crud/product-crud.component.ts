@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../header.service';
+import { HeaderService } from '../header/header.service';
 
 @Component({
   selector: 'crud-product-crud',
@@ -7,11 +7,12 @@ import { HeaderService } from '../header.service';
   styleUrls: ['./product-crud.component.css']
 })
 export class ProductCrudComponent implements OnInit {
+  title: "Produtos"
 
   constructor() { }
 
   ngOnInit() {
-    HeaderService.mudouNome("Produtos")
+    HeaderService.changedTheName(this.title)
   }
 
 }

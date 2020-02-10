@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../header.service';
+import { HeaderService } from '../header/header.service';
 
 @Component({
   selector: 'crud-home',
@@ -8,11 +8,12 @@ import { HeaderService } from '../header.service';
   providers: [HeaderService]
 })
 export class HomeComponent implements OnInit {
+  title = "Início"
 
   constructor() { }
 
   ngOnInit() {
-    HeaderService.mudouNome("Início")
+    HeaderService.changedTheName(this.title)
   }
 
 }
