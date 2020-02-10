@@ -1,6 +1,8 @@
 <mat-toolbar class="header" color="primary">
-    <i class="material-icons">
-        {{iconName}}
-    </i>
-    {{title}}
+    <a [routerLink]="link">
+        <i class="material-icons">
+            {{iconName}}
+        </i>
+        {{title}}
+    </a> 
 </mat-toolbar>

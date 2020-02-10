@@ -9,10 +9,12 @@ import { HeaderService } from './header.service';
 export class HeaderComponent implements OnInit {
   title
   iconName
+  link
   
   constructor() {
-    this.title = 'Fenix',
-    this.iconName = "dashboard"
+    this.title = "Fenix",
+    this.iconName = "dashboard",
+    this.link = "/"
   }
 
   ngOnInit() {
@@ -21,6 +23,7 @@ export class HeaderComponent implements OnInit {
         
         this.title = await data.title
         this.iconName = await data.iconName
+        this.link = await data.link
         
         console.log(data)
       }

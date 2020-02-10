@@ -9,14 +9,16 @@ import { HeaderService } from '../header/header.service';
 export class ProductCrudComponent implements OnInit {
   title
   iconName
+  link
 
   constructor() {
     this.title = "Produtos"
     this.iconName = "storefront"
+    this.link = "/products"
   }
 
   ngOnInit() {
-    HeaderService.changedTheName({title: this.title, iconName: this.iconName})
+    HeaderService.changedTheName({title: this.title, iconName: this.iconName, link: this.link})
   }
 
 }

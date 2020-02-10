@@ -12,6 +12,6 @@ a {
 }
 
 i {
-    margin: auto 8px;
-    /* vertical-align: middle; */
+    margin: auto 4px;
+    vertical-align: sub;
 }
