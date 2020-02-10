@@ -7,9 +7,11 @@ import { HeaderService } from '../header/header.service';
   styleUrls: ['./product-crud.component.css']
 })
 export class ProductCrudComponent implements OnInit {
-  title: "Produtos"
+  title
 
-  constructor() { }
+  constructor() {
+    this.title = "Produtos"
+  }
 
   ngOnInit() {
     HeaderService.changedTheName(this.title)

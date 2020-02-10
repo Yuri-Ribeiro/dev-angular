@@ -8,9 +8,11 @@ import { HeaderService } from '../header/header.service';
   providers: [HeaderService]
 })
 export class HomeComponent implements OnInit {
-  title = "Início"
+  title
 
-  constructor() { }
+  constructor() {
+    this.title = "Início"
+  }
 
   ngOnInit() {
     HeaderService.changedTheName(this.title)
