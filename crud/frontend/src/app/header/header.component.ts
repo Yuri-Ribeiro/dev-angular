@@ -20,12 +20,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     HeaderService.forwardTheHeader.subscribe(
       async data => {
-        
         this.title = await data.title
         this.iconName = await data.iconName
         this.link = await data.link
-        
-        console.log(data)
       }
     );
   }
