@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductCrudModule } from './product-crud/product-crud.module';
 import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     NavComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
