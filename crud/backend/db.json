@@ -32,7 +32,7 @@
     },
     {
       "name": "2x Milk Shake + Batata",
-      "price": "35.6",
+      "price": "25.6",
       "id": 9
     },
     {
@@ -44,11 +44,6 @@
       "name": "Sorvete",
       "price": "4.5",
       "id": 12
-    },
-    {
-      "name": "teste",
-      "price": "12",
-      "id": 13
     }
   ]
 }
