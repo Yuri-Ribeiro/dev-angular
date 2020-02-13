@@ -5,8 +5,8 @@
 ##### 3 - npm init -y
 
 ##### 4 - npm i json-server@0.16.0
-    ## Segundo a documentação do npm, vai automaticamente para dependências de produção (mesmo que usar a flag -P)
-    ## https://docs.npmjs.com/cli/install
+## Segundo a documentação do npm, vai automaticamente para dependências de produção (é o mesmo que usar a flag -P)
+## https://docs.npmjs.com/cli/install
 
 ##### 5 - adicionar o script abaixo
     "start": "json-server --watch db.json --port 3001"

@@ -11,7 +11,9 @@
     align-items: center;
     justify-content: center;
     width: 200px;
-    background: #3f51b5;
+    background: #7b1fa2;
+    color: #fff;
+    z-index: 2;
 }
 
 .logo-card {
