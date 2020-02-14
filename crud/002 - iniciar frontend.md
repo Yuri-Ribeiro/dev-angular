@@ -2,7 +2,8 @@
 
 ##### 2 - abrir terminal na pasta frontend
 
-##### 3 - executar ng new fenix --prefix="fenix" --directory="./" --minimal --skip-git
+##### 3 - executar
+    ng new fenix --prefix="fenix" --directory="./" --minimal --skip-git
 
 ### reponder sim para adicionar roteamento
 ### escolher CSS
