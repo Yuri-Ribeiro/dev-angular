@@ -25,17 +25,17 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef> Ações </th>
     <td mat-cell *matCellDef="let product">
-        <!-- <button routerLink="/products/update/{{product.id}}"> -->
-          <i  routerLink="/products/update/{{product.id}}" class="material-icons">
+        <a routerLink="/products/update/{{product.id}}">
+          <i class="material-icons">
               edit
           </i>
-        <!-- </button> -->
+        </a>
         &nbsp;
-        <!-- <button routerLink="/products/delete/{{product.id}}"> -->
-          <i routerLink="/products/delete/{{product.id}}" class="material-icons">
+        <a routerLink="/products/delete/{{product.id}}">
+          <i class="material-icons">
               delete
           </i>
-        <!-- </button> -->
+        </a>
         
     </td>
   </ng-container>

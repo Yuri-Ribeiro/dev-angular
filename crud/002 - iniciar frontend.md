@@ -13,7 +13,7 @@
 # fenix
     nome da aplicação
 # --prefix="fenix"
-    prefixo presente no nome seletor de todo componente. Exemplo: fenix-home
+    prefixo que ficará presente no seletor de todos os componentes. Exemplo: fenix-home
 # --directory="./"
     cria projeto na pasta atual. Se não especificado, criará uma pasta com mesmo nome da aplicação e iniciará o projeto nela
 # --minimal
