@@ -5,7 +5,12 @@
 <mat-toolbar class="footer">
 </mat-toolbar>
 
-##### 3 - Adicionar mensagem personalizada
+##### 3 - Adicionar o seletor do footer no componente principal, ficando:
+<fenix-header></fenix-header>
+
+<fenix-footer></fenix-footer>
+
+##### 4 - Adicionar mensagem personalizada
 <mat-toolbar class="footer">
     <span class="footer-message">
         Desenvolvido com
@@ -16,7 +21,7 @@
     </span>
 </mat-toolbar>
 
-##### 6 - adicionar css
+##### 5 - adicionar css
 .footer {
     position: fixed;
     bottom: 0;

@@ -6,7 +6,15 @@
 ##### 2 - importar componente toolbar
     import {MatToolbarModule} from '@angular/material/toolbar';
 
-##### 3 - Adicionar o toolbar ao template:
+##### 3 - incluir MatSidenavModule na lista de imports. Ficará, por exemplo:
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule
+],
+
+##### 4 - Adicionar o toolbar ao template:
     <mat-toolbar class="header mat-elevation-z4">
     </mat-toolbar>
 
@@ -15,7 +23,10 @@
     X é o número da elevação. Vai de 0 a 24.
     mais informações: https://material.angular.io/guide/elevation
 
-##### 4 - Adicionar título com link ao header
+##### 5 - Adicionar o seletor do header (fenix-header) no template do componente principal, ficando:
+<fenix-header></fenix-header>
+
+##### 6 - Adicionar título com link ao header
 <mat-toolbar class="header mat-elevation-z4">
     <a routerLink="">
         Fenix App
@@ -25,7 +36,7 @@
 ## routerLink
     é uma diretiva semelhante a href
 
-##### 5 - Adicionar um ícone
+##### 7 - Adicionar um ícone
 <mat-toolbar class="header mat-elevation-z4">
     <a routerLink="">
         <i class="material-icons">
@@ -42,7 +53,7 @@
     ícone do angular material
     mais ícones: https://material.io/resources/icons
 
-##### 6 - adicionar css
+##### 8 - adicionar css
 .header {
     position: fixed;
     top: 0;
