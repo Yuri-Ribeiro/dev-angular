@@ -4,7 +4,8 @@
     ng add @angular/material
 
 ## Escolher o temaPurple and Green 
+## Se perguntar sobre adicionar "HammerJS for gesture recognition", não precisa
 
-## Responder sim para definir tipografia como global. Assim os textos ficarão de acordo com o Material Design. Mais informações: https://material.angular.io/guide/typography
+## Se perguntar, responder sim para definir tipografia como global. Assim os textos ficarão de acordo com o Material Design. Mais informações: https://material.angular.io/guide/typography
 
 ## Responder sim para animações
