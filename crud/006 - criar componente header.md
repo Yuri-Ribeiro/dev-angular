@@ -1,12 +1,17 @@
 ## Documentação:https://material.angular.io/components/toolbar
 
 ##### 1 - criar componente header
-    ng g c header
+    ng g c header --skipTests
 
-##### 2 - importar componente toolbar
+## --skipTests
+    Não irá gerar arquivo de teste (final .spec.ts)
+
+
+##### 2 - importar componentes de toolbar no módulo principal (app.module.ts)
     import {MatToolbarModule} from '@angular/material/toolbar';
 
-##### 3 - incluir MatSidenavModule na lista de imports. Ficará, por exemplo:
+
+##### 3 - incluir MatToolbarModule na lista de imports. Ficará, por exemplo:
 imports: [
     BrowserModule,
     AppRoutingModule,
@@ -14,36 +19,98 @@ imports: [
     MatToolbarModule
 ],
 
-##### 4 - Adicionar o toolbar ao template:
-    <mat-toolbar class="header mat-elevation-z4">
-    </mat-toolbar>
+
+##### 4 - Adicionar o seletor do header (fenix-header) no template do componente principal, ficando:
+<fenix-header></fenix-header>
+
+
+##### 5 - Adicionar o toolbar ao template de header:
+<mat-toolbar class="header mat-elevation-z4">
+</mat-toolbar>
+
 
 ## mat-elevation-zX
     adiciona uma sombra para separar elementos.
     X é o número da elevação. Vai de 0 a 24.
     mais informações: https://material.angular.io/guide/elevation
 
-##### 5 - Adicionar o seletor do header (fenix-header) no template do componente principal, ficando:
-<fenix-header></fenix-header>
 
-##### 6 - Adicionar título com link ao header
+##### 6 - Adicionar CSS
+.header {
+    position: fixed;
+    background: #3f51b5;
+    z-index: 2;
+}
+
+
+##### 7 - Colocar na pasta assets/img/ a imagem do seguinte link http://bit.ly/2SU4N7H
+
+
+##### 8 - Adicionar logo com link
 <mat-toolbar class="header mat-elevation-z4">
-    <a routerLink="">
-        Fenix App
-    </a>
+    <span>
+        <a routerLink="/">
+            <img id="logo" src="assets/img/logo.png">
+        </a>
+    </span>
+</mat-toolbar>
+
+## documentação recomenda que coloque cada elemento da toolbar dentro de um span
+
+
+##### 9 - Adicionar CSS
+#logo {
+    display: flex;
+    max-height: 32px;
+}
+
+
+##### 10 - Adicionar título com link ao header
+<mat-toolbar class="header mat-elevation-z4">
+    <span>
+        <a routerLink="/">
+            <img id="logo" src="assets/img/logo.png">
+        </a>
+    </span>
+    <span class="title-group">
+        <a routerLink="">
+            Fenix App
+        </a> 
+    </span>
 </mat-toolbar>
 
 ## routerLink
-    é uma diretiva semelhante a href
+    é uma diretiva semelhante a href. Deixar sem referência por enquanto
+## span com classe title-group
+    para agrupar link com o ícone que virá a seguir 
 
-##### 7 - Adicionar um ícone
+
+##### 11 - Adicionar CSS
+.title-group {
+    margin-left: 28px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+##### 12 - Adicionar um ícone
 <mat-toolbar class="header mat-elevation-z4">
-    <a routerLink="">
-        <i class="material-icons">
-            web
-        </i>
-        Fenix App
-    </a>
+    <span>
+        <a routerLink="/">
+            <img id="logo" src="assets/img/logo.png">
+        </a>
+    </span>
+    <span class="title-group">
+        <a routerLink="">
+            <i class="material-icons">
+                web
+            </i>
+            Fenix App
+        </a> 
+    </span>
 </mat-toolbar>
 
 ## class="material-icons"
@@ -53,14 +120,34 @@ imports: [
     ícone do angular material
     mais ícones: https://material.io/resources/icons
 
-##### 8 - adicionar css
+
+##### 13 - Adicionar CSS
+i {
+    margin: auto 4px;
+    vertical-align: sub;
+}
+
+## vertical-align: sub;
+    pro ícone ficar alinhado com o texto
+
+
+
+
+
+## CSS completo
 .header {
     position: fixed;
-    top: 0;
-    left: 200px;
-    right: 0;
-    z-index: 2;
     background: #3f51b5;
+    z-index: 2;
+}
+
+#logo {
+    display: flex;
+    max-height: 32px;
+}
+
+.title-group {
+    margin-left: 28px;
 }
 
 a {
@@ -72,9 +159,3 @@ i {
     margin: auto 4px;
     vertical-align: sub;
 }
-
-## left: 200px;
-    espaço que será da nav
-
-## vertical-align: sub;
-    pro ícone ficar alinhado com o texto

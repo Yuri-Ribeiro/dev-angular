@@ -2,4 +2,4 @@
     É possível fazer referência a um arquivo html, criando na mesma pasta o "app.component.html". Para referenciá-lo, mudar para a propriedade templateUrl no componente,
     ficando: templateUrl: './app.component.html'
 
-##### 2 - apagar o conteúdo do template e qualquer propriedade definida no componente
+##### 2 - apagar o conteúdo do template e qualquer atributo definido no componente principal
