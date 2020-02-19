@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from '../../components/template/header/header.service';
 
 @Component({
   selector: 'crud-product-crud-homepage',
@@ -7,10 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-crud-homepage.component.css']
 })
 export class ProductCrudHomepageComponent implements OnInit {
+  title
+  iconName
+  link
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.title = "Produtos"
+    this.iconName = "storefront"
+    this.link = "/products"
+  }
 
   ngOnInit() {
+    HeaderService.changedTheName({title: this.title, iconName: this.iconName, link: this.link})
+
   }
 
   createProduct() {

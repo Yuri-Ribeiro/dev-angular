@@ -2,17 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './main/app.component';
+import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule, MatToolbarModule, MatSidenavModule, MatButtonToggleModule, MatListModule } from '@angular/material/';
+import { MatTableModule, MatButtonModule, MatInputModule, } from '@angular/material';
 
-import { HomeComponent } from './components/home/home.component';
-import { ProductCrudModule } from './components/product-crud/product-crud.module';
+
+import { HomeComponent } from './views/home/home.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { ProductCrudHomepageComponent } from './views/product-crud-homepage/product-crud-homepage.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,18 +28,26 @@ import { FooterComponent } from './components/template/footer/footer.component';
     NavComponent,
     HeaderComponent,
     FooterComponent,
+    ProductReadComponent,
+    ProductCreateComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent,
+    ProductCrudHomepageComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
     MatSidenavModule,
-    ProductCrudModule,
     MatButtonToggleModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

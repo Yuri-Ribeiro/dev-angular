@@ -26,3 +26,7 @@ i {
 a[mat-list-item] {
     color: #fff;
 }
+
+.crud-content {
+    height: 100%;
+}
