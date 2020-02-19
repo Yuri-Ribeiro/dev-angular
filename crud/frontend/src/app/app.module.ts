@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule, MatToolbarModule, MatSidenavModule, MatButtonToggleModule, MatListModule } from '@angular/material/';
 
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './views/home/home.component';
 import { ProductCrudModule } from './product-crud/product-crud.module';
 import { NavComponent } from './template/nav/nav.component';
 import { HeaderComponent } from './template/header/header.component';
