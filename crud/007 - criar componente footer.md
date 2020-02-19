@@ -1,14 +1,17 @@
 ##### 1 - criar componente footer
-    ng g c footer
+    ng g c template/footer --skipTests
 
-##### 2 - Adicionar toolbar ao template:
-<mat-toolbar class="footer">
-</mat-toolbar>
 
 ##### 3 - Adicionar o seletor do footer no componente principal, ficando:
 <fenix-header></fenix-header>
 
 <fenix-footer></fenix-footer>
+
+
+##### 2 - Adicionar toolbar ao template:
+<mat-toolbar class="footer">
+</mat-toolbar>
+
 
 ##### 4 - Adicionar mensagem personalizada
 <mat-toolbar class="footer">

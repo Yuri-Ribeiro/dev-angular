@@ -1,7 +1,7 @@
 ## Documentação:https://material.angular.io/components/toolbar
 
 ##### 1 - criar componente header
-    ng g c header --skipTests
+    ng g c template/header --skipTests
 
 ## --skipTests
     Não irá gerar arquivo de teste (final .spec.ts)
