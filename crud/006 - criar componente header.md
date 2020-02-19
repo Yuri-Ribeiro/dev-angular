@@ -1,7 +1,7 @@
 ## Documentação:https://material.angular.io/components/toolbar
 
 ##### 1 - criar componente header
-    ng g c template/header --skipTests
+    ng g c components/template/header --skipTests
 
 ## --skipTests
     Não irá gerar arquivo de teste (final .spec.ts)
@@ -27,7 +27,6 @@ imports: [
 ##### 5 - Adicionar o toolbar ao template de header:
 <mat-toolbar class="header mat-elevation-z4">
 </mat-toolbar>
-
 
 ## mat-elevation-zX
     adiciona uma sombra para separar elementos.
