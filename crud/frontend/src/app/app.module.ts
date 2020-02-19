@@ -10,9 +10,9 @@ import { MatCardModule, MatToolbarModule, MatSidenavModule, MatButtonToggleModul
 
 import { HomeComponent } from './home/home.component';
 import { ProductCrudModule } from './product-crud/product-crud.module';
-import { NavComponent } from './nav/nav.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './template/nav/nav.component';
+import { HeaderComponent } from './template/header/header.component';
+import { FooterComponent } from './template/footer/footer.component';
 
 @NgModule({
   declarations: [
