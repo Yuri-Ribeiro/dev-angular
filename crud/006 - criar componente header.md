@@ -1,17 +1,24 @@
-## Documentação:https://material.angular.io/components/toolbar
+## Documentação dos componentes Toolbar: https://material.angular.io/components/toolbar
 
-##### 1 - criar componente header
-    ng g c components/template/header --skipTests
+##### 1 - com o terminal na pasta frontend, executar comando abaixo para criar o componente header
+ng g c components/template/header --skipTests
+
+## alternativa:
+ng generate component components/template/header --skipTests
 
 ## --skipTests
-    Não irá gerar arquivo de teste (final .spec.ts)
+Não irá gerar arquivo de teste (final .spec.ts)
 
 
-##### 2 - importar componentes de toolbar no módulo principal (app.module.ts)
-    import {MatToolbarModule} from '@angular/material/toolbar';
+##### 2 - Adicionar o seletor do header (fenix-header) no template do componente principal, ficando:
+<fenix-header></fenix-header>
 
 
-##### 3 - incluir MatToolbarModule na lista de imports. Ficará, por exemplo:
+##### 3 - importar componentes de toolbar no módulo principal (app.module.ts)
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+
+##### 4 - incluir MatToolbarModule na lista de imports. Ficará, por exemplo:
 imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,18 +27,13 @@ imports: [
 ],
 
 
-##### 4 - Adicionar o seletor do header (fenix-header) no template do componente principal, ficando:
-<fenix-header></fenix-header>
-
-
 ##### 5 - Adicionar o toolbar ao template de header:
 <mat-toolbar class="header mat-elevation-z4">
 </mat-toolbar>
 
 ## mat-elevation-zX
-    adiciona uma sombra para separar elementos.
-    X é o número da elevação. Vai de 0 a 24.
-    mais informações: https://material.angular.io/guide/elevation
+Adiciona uma sombra para separar elementos. X é o número da elevação, que vai de 0 a 24.
+Mais informações: https://material.angular.io/guide/elevation
 
 
 ##### 6 - Adicionar CSS
@@ -79,9 +81,10 @@ imports: [
 </mat-toolbar>
 
 ## routerLink
-    é uma diretiva semelhante a href. Deixar sem referência por enquanto
+É uma diretiva semelhante a href. Deixar sem referência por enquanto
+
 ## span com classe title-group
-    para agrupar link com o ícone que virá a seguir 
+Agrupar link com o ícone que virá a seguir 
 
 
 ##### 11 - Adicionar CSS
@@ -113,11 +116,11 @@ a {
 </mat-toolbar>
 
 ## class="material-icons"
-    indica que se trata de ícones do material
+Indica que se trata de ícones do material
 
 ## web
-    ícone do angular material
-    mais ícones: https://material.io/resources/icons
+Ícone do angular material
+Mais ícones: https://material.io/resources/icons
 
 
 ##### 13 - Adicionar CSS
@@ -127,7 +130,7 @@ i {
 }
 
 ## vertical-align: sub;
-    pro ícone ficar alinhado com o texto
+Alinhar ícone com texto
 
 
 

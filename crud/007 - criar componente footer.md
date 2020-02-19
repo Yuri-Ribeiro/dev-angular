@@ -1,5 +1,5 @@
 ##### 1 - criar componente footer
-    ng g c components/template/footer --skipTests
+ng g c components/template/footer --skipTests
 
 
 ##### 2 - Adicionar o seletor do footer no componente principal, ficando:
