@@ -15,18 +15,14 @@
     color: #fff;
 }
 
-i {
-    margin: 16px 8px;
-}
-
 .nav-list {
     margin-top: 16px;
 }
 
-a[mat-list-item] {
-    color: #fff;
+i {
+    margin: 16px 8px;
 }
 
-.sidenav-content {
-    height: 100%;
+.content {
+    padding: 16px;
 }
