@@ -27,7 +27,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 Abrigará conteúdo do menu lateral e o conteúdo principal. Contéudos que você não deseja que sejam afetado pela barra lateral, como um header ou footer, podem ser colocados fora do contêiner
 
 
-##### 5 - adicionar CSS
+##### 6 - adicionar CSS
 .container {
     position: absolute;
     top: 64px;
@@ -39,7 +39,7 @@ Abrigará conteúdo do menu lateral e o conteúdo principal. Contéudos que voc�
 ## 64px é a altura tanto do header como do footer.
 
 
-##### 5 - adicionar o componente <mat-sidenav>, que agrupa o conteúdo do menu lateral
+##### 7 - adicionar o componente <mat-sidenav>, que agrupa o conteúdo do menu lateral
 <mat-sidenav-container class="container">
     <mat-sidenav class="sidenav mat-elevation-z4" mode="side" opened
     fixedInViewport="true" fixedTopGap="64" fixedBottomGap="0">
@@ -60,7 +60,7 @@ Propriedade que ativa o posicionamento fixo para a nav.
 Funcionam quando se usa fixedInViewport. Definem espaço superior e inferior, respectivamente. Valores em pixels.
 
 
-##### 7 - Adicionar CSS
+##### 8 - Adicionar CSS
 .sidenav {
     display: flex;
     align-items: center;
@@ -73,14 +73,14 @@ Funcionam quando se usa fixedInViewport. Definem espaço superior e inferior, re
 ## - Sidenav ficará posicionada
 
 
-##### 6 - Importar componentes de lista
+##### 9 - Importar componentes de lista
 import {MatListModule} from '@angular/material/list';
 
 
-##### 7 - colocar MatListModule na lista de imports
+##### 10 - colocar MatListModule na lista de imports
 
 
-##### 6 - Adicionar código abaixo em <mat-sidenav> para adicionar itens no menu lateral
+##### 11 - Adicionar código abaixo em <mat-sidenav> para adicionar itens no menu lateral
 <mat-nav-list class="nav-list">
       <a mat-list-item routerLink="">
         <i class="material-icons">
@@ -125,7 +125,7 @@ Documentação recomenda colocar nos elementos de <mat-nav-list>
 </mat-sidenav-container>
 
 
-##### N - Adicionar CSS
+##### 12 - Adicionar CSS
 .nav-list {
     margin-top: 16px;
 }
@@ -135,7 +135,7 @@ i {
 }
 
 
-##### 7 - Adicionar código abaixo em <mat-sidenav-container>, logo após </mat-sidenav>, para agrupar conteúdo principal
+##### 13 - Adicionar código abaixo em <mat-sidenav-container>, logo após </mat-sidenav>, para agrupar conteúdo principal
 <mat-sidenav-content class="content">
 </mat-sidenav-content>
 
@@ -163,14 +163,16 @@ i {
   </mat-sidenav-content>
 </mat-sidenav-container>
 
+## futuramente, em <mat-sidenav-content>, haverá uma tag que será responsável pelas rotas
 
-##### 9 - Adicionar CSS
+
+##### 14 - Adicionar CSS
 .content {
     padding: 16px;
 }
 
 
-##### 8 - CSS completo
+##### 15 - CSS completo
 .container {
     position: absolute;
     top: 64px;

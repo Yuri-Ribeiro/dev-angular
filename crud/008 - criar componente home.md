@@ -9,6 +9,8 @@ ng g c views/home --skipTests
     <fenix-home></fenix-home>
 </mat-sidenav-content>
 
+## Por enquanto, sem navegação com rotas
+
 
 ##### 3 - importar componentes card
 import {MatCardModule} from '@angular/material/card';
