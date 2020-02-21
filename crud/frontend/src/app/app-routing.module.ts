@@ -8,8 +8,7 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
-  {path: "products", redirectTo: "/products/home", pathMatch: "full"},
-  {path: "products/home", component: ProductCrudHomepageComponent},
+  {path: "products", component: ProductCrudHomepageComponent},
   {path: "products/create", component: ProductCreateComponent},
   {path: "products/update/:id", component: ProductUpdateComponent},
   {path: "products/delete/:id", component: ProductDeleteComponent},

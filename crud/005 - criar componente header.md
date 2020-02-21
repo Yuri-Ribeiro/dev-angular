@@ -50,7 +50,7 @@ Mais informações: https://material.angular.io/guide/elevation
 ##### 8 - Adicionar logo com link
 <mat-toolbar class="header mat-elevation-z4">
     <span>
-        <a routerLink="/">
+        <a routerLink="">
             <img id="logo" src="assets/img/logo.png">
         </a>
     </span>
@@ -69,7 +69,7 @@ Mais informações: https://material.angular.io/guide/elevation
 ##### 10 - Adicionar título com link ao header
 <mat-toolbar class="header mat-elevation-z4">
     <span>
-        <a routerLink="/">
+        <a routerLink="">
             <img id="logo" src="assets/img/logo.png">
         </a>
     </span>
@@ -101,7 +101,7 @@ a {
 ##### 12 - Adicionar um ícone
 <mat-toolbar class="header mat-elevation-z4">
     <span>
-        <a routerLink="/">
+        <a routerLink="">
             <img id="logo" src="assets/img/logo.png">
         </a>
     </span>
