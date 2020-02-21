@@ -1,5 +1,4 @@
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="responseProducts" class="mat-elevation-z8">
+  <table class="mat-elevation-z3" mat-table [dataSource]="responseProducts">
       <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
     
@@ -43,4 +42,3 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-</div>

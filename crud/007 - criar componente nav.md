@@ -137,7 +137,6 @@ i {
 
 ##### 7 - Adicionar código abaixo em <mat-sidenav-container>, logo após </mat-sidenav>, para agrupar conteúdo principal
 <mat-sidenav-content class="content">
-        <router-outlet></router-outlet>
 </mat-sidenav-content>
 
 ## Ficará:
@@ -161,7 +160,6 @@ i {
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="content">
-        <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
