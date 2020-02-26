@@ -19,7 +19,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 ##### 4 - colocar MatSidenavModule na lista de imports
 
 
-##### 5 - no template da nav, adicionar o componente <mat-sidenav-container>
+##### 5 - no template da nav, adicionar o componente <mat-sidenav-container>, substituindo todo seu conteúdo por:
 <mat-sidenav-container class="container">
 </mat-sidenav-container>
 
@@ -36,7 +36,7 @@ Abrigará conteúdo do menu lateral e o conteúdo principal. Contéudos que voc�
     right: 0;
 }
 
-## 64px é a altura tanto do header como do footer.
+## 64px é a altura tanto do header como do footer, ou seja, o container oculpará o espaço entre o header e o footer.
 
 
 ##### 7 - adicionar o componente <mat-sidenav>, que agrupa o conteúdo do menu lateral
@@ -163,7 +163,7 @@ i {
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-## futuramente, em <mat-sidenav-content>, haverá uma tag que será responsável pelas rotas
+## futuramente, em <mat-sidenav-content>, haverá um componete que será responsável pelas rotas
 
 
 ##### 14 - Adicionar CSS

@@ -13,7 +13,7 @@ import { ProductCrudHomepageComponent } from './views/product-crud-homepage/prod
 
 
 ##### 3 - Para definir que home será o componente padrão quando nenhuma rota for informada, adicionar objeto abaixo à lista routes:
-{path: "", component: HomeComponent}
+{path: "", component: HomeComponent},
 
 ## Ficando:
 const routes: Routes = [
@@ -26,6 +26,8 @@ const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "products", component: ProductCrudHomepageComponent},
 ];
+
+## Já dá pra testar colocando /products diretamente na URL
 
 
 ##### 5 - No template de Nav, definir as rotas corretas para routerLink, ficando:

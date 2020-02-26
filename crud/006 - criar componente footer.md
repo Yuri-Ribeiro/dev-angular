@@ -11,7 +11,7 @@ ng g c components/template/footer --skipTests
 ##### 3 - Como toolbar já importado no módulo principal, não precisa mais
 
 
-##### 4 - Adicionar toolbar ao template de footer:
+##### 4 - Adicionar toolbar ao template de footer, substituindo todo seu conteúdo por:
 <mat-toolbar class="footer">
 </mat-toolbar>
 
@@ -23,7 +23,7 @@ ng g c components/template/footer --skipTests
 }
 
 
-##### 5 - Adicionar mensagem personalizada
+##### 6 - Adicionar mensagem personalizada
 <mat-toolbar class="footer">
     <span class="footer-message">
         Desenvolvido com
@@ -35,7 +35,7 @@ ng g c components/template/footer --skipTests
 </mat-toolbar>
 
 
-##### 6 - adicionar CSS
+##### 7 - adicionar CSS
 .footer-message {
     position: fixed;
     right: 16px;

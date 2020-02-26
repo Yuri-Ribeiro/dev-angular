@@ -7,7 +7,7 @@ ng g c components/template/header --skipTests
 ng generate component components/template/header --skipTests
 
 ## --skipTests
-Não irá gerar arquivo de teste (final .spec.ts)
+Não irá gerar arquivo de teste (final .spec.ts).
 
 
 ##### 2 - Adicionar o seletor do header (fenix-header) no template do componente principal, ficando:
@@ -27,7 +27,7 @@ imports: [
 ],
 
 
-##### 5 - Adicionar o toolbar ao template de header:
+##### 5 - Adicionar o toolbar ao template de header, substituindo todo seu conteúdo por:
 <mat-toolbar class="header mat-elevation-z4">
 </mat-toolbar>
 
@@ -81,10 +81,10 @@ Mais informações: https://material.angular.io/guide/elevation
 </mat-toolbar>
 
 ## routerLink
-É uma diretiva semelhante a href. Deixar sem referência por enquanto
+É uma diretiva semelhante a href. Deixar sem referência por enquanto.
 
 ## span com classe title-group
-Agrupar link com o ícone que virá a seguir 
+Agrupar link com o ícone que virá a seguir.
 
 
 ##### 11 - Adicionar CSS
