@@ -1,3 +1,5 @@
+## Esse componente servirá para abrigar o botão para tela de novo produto, para carregar a tabela de produtos e para mudar o nome e ícone do header
+
 ##### 1 - criar componente product-crud-homepage, que será a página inicial para o Crud
 ng g c views/product-crud-homepage --skipTests
 

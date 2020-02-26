@@ -17,19 +17,19 @@
 {
 "products": [
     {
+      "id": 2,
       "name": "X-Búrguer",
-      "price": 10.5,
-      "id": 2
+      "price": 10.5
     },
     {
+      "id": 3,
       "name": "X-Bacon",
-      "price": 12.5,
-      "id": 3
+      "price": 12.5
     },
     {
+      "id": 4,
       "name": "X-Tudo",
-      "price": "14.5",
-      "id": 4
+      "price": "14.5"
     }
   ]
 }
