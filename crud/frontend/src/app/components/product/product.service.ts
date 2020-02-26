@@ -2,15 +2,24 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { Product, RequestProduct } from './product.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
 
   private URL = 'http://localhost:3001/products'
+
+  showMessage(message): void {
+    this._snackBar.open(message, 'X', {
+      duration: 3000,
+      horizontalPosition: "right",
+      verticalPosition: "top"
+    });
+  }
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.URL)
