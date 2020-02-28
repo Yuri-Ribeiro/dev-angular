@@ -1,9 +1,7 @@
 ##### 1 - Criar pasta "product" dentro da pasta "components"
 
-## terá tudo relacionado a produto
 
-
-##### 2 - Criar arquivo product.model.ts
+##### 2 - Nela, criar arquivo product.model.ts
 
 
 ##### 3 - Descrever como será um produto, criando interface Product em product.model.ts:
