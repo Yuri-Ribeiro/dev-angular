@@ -2,7 +2,15 @@
 ng g s components/product/product --skipTests
 
 ### o seguinte código será gerado
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+
+  constructor() { }
+}
 
 ## @Injectable
 Decorador que marca uma classe como disponível para ser fornecida e injetada como uma dependência em outras classes. Ou seja, indica que a classe ProductService está pronta para ser injetada em outras classes.
