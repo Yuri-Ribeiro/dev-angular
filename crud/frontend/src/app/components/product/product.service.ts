@@ -11,8 +11,20 @@ export class ProductService {
 
   constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
 
-  private URL = 'http://localhost:3001/products'
+  private baseApiUrl = 'http://localhost:3001/products'
 
+  create(req: RequestProduct): Observable<Product> {
+    return this.http.post<Product>(this.baseApiUrl, req)
+  }
+  
+  read(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseApiUrl)
+  }
+  
+  readById(id: string): Observable<Product> {
+    return this.http.get<Product>(`${this.baseApiUrl}/${id}`)
+  }
+  
   showMessage(message): void {
     this._snackBar.open(message, 'X', {
       duration: 3000,
@@ -21,30 +33,12 @@ export class ProductService {
     });
   }
 
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.URL)
+  update(id: string, req: RequestProduct): Observable<Product> {
+    return this.http.put<Product>(`${this.baseApiUrl}/${id}`, req)
   }
   
-  createProduct(req: RequestProduct): Observable<Product> {
-    return this.http.post<Product>(this.URL, req)
-  }
-  
-  getProduct(id: string): Observable<Product> {
-    const formatedURL = `${this.URL}/${id}`
-
-    return this.http.get<Product>(formatedURL)
-  }
-
-  updateProduct(id: string, req: RequestProduct): Observable<Product> {
-    const formatedURL = `${this.URL}/${id}`
-    
-    return this.http.put<Product>(formatedURL, req)
-  }
-  
-  deleteProduct(id: string): Observable<any> {
-    const formatedURL = `${this.URL}/${id}`
-
-    return this.http.delete<any>(formatedURL)
+  delete(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseApiUrl}/${id}`)
   }
 
 }

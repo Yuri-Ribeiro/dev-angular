@@ -18,7 +18,7 @@ export class ProductUpdateComponent implements OnInit {
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.paramMap.get('id')
 
-    this.productService.getProduct(this.id).subscribe(res => {
+    this.productService.readById(this.id).subscribe(res => {
       this.req = {
         name: res.name,
         price: res.price
@@ -27,7 +27,7 @@ export class ProductUpdateComponent implements OnInit {
   }
 
   update() {
-    this.productService.updateProduct(this.id, this.req).subscribe(res => {
+    this.productService.update(this.id, this.req).subscribe(res => {
       this.productService.showMessage("Produto alterado com sucesso")
       this.router.navigate(['/products'])
     })
