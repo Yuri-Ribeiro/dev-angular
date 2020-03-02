@@ -1,7 +1,7 @@
 ## referência: https://material.angular.io/guide/getting-started
 
 ##### 1 - abrir terminal na pasta frontend e executar o comando
-    ng add @angular/material
+ng add @angular/material
 
 ## Escolher o temaPurple and Green
 
