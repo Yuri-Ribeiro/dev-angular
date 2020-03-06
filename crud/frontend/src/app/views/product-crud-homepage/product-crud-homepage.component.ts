@@ -23,7 +23,7 @@ export class ProductCrudHomepageComponent implements OnInit {
 
   }
 
-  createProduct() {
+  navigateToCreateProduct() {
     this.router.navigate(['/products/create'])
   }
 

@@ -27,7 +27,7 @@ Declara que esse serviço deve ser criado pelo injetor raiz da aplicação.
 Mais informações: https://angular.io/guide/hierarchical-dependency-injection
 
 
-##### 2 - Adicionar também a variável baseApiUrl
+##### 2 - Adicionar a variável baseApiUrl
 private baseApiUrl = 'http://localhost:3001/products'
 
 
@@ -42,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from "@angular/common/http";
 
 
-##### 6 - Ainda no serviço de produto, injetar HttpClient na classe ProductService
+##### 6 - Ainda no serviço de produto, injetar HttpClient
 constructor(private http: HttpClient) { }
 
 
@@ -58,8 +58,8 @@ import { Observable } from 'rxjs';
 import { Product } from './product.model';
 
 
-##### 9 - Criar método read
-read(): Observable<Product[]> {  }
+##### 9 - Criar método create
+create(): Observable<Product[]> {  }
 
 ## Erro por enquanto que não tem retorno
 
@@ -74,10 +74,10 @@ https://medium.com/@luukgruijs/understanding-creating-and-subscribing-to-observa
 O Observable é de um array de Product. Isso indica que o retorno do Observable é um array de Product.
 
 
-##### 10 - Adicionar escopo à função read
-read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseApiUrl)
+##### 10 - Adicionar escopo à função create
+create(req: RequestProduct): Observable<Product> {
+  return this.http.post<Product>(this.baseApiUrl, req)
 }
 
-## get<Product[]>
-http.get é um método que retorna um observable genérico (Observable<Object>). <Product[]> especifica que o tipo de retorno deve ser um Observable<Product[]>. Assim, evita-se incompatibilidades com o retorno da própria função read.
+## post<Product[]>
+http.post, como todos os outros métodos HTTL dessa classe, é um método que retorna um observable genérico (Observable<Object>). <Product[]> especifica que o tipo de retorno deve ser um Observable<Product[]>. Assim, evita-se incompatibilidades com o retorno da própria função create.
