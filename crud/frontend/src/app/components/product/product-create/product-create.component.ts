@@ -20,8 +20,8 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  save() {
-    this.productService.create(this.req).subscribe(res => {
+  createProduct() {
+    this.productService.create(this.req).subscribe( () => {
       this.productService.showMessage('Produto salvo com sucesso!')
       this.router.navigate(['/products'])
     })

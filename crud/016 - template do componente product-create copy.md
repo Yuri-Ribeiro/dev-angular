@@ -1,8 +1,33 @@
-##### 3 - No script de product-create, importar a interface RequestProduct 
+##### 1 - Em product-create.component, importar a interface RequestProduct
 import { RequestProduct } from '../product.model';
 
 
-##### n - Criar método para 
+##### 2 - Criar o objeto que irá na requisição
+req: RequestProduct = {
+  name: '',
+  price: null
+}
+
+## Seus valores serão atualizados por meio da técnica two way data binding, que será explicada mais a frente
+
+
+##### 2 - Em product-create.component, importar os serviços de produto e Router   
+import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
+
+## router será necessário para quando, assim que um produto for adicionado, haja uma navegação automática para a tela de homepage do Crud
+
+
+##### 3 - Em product-create.component, injetar serviços de produto e Router
+  constructor(private productService: ProductService, private router: Router) { }
+
+
+##### n - Criar método create, que será chamado sempre que houver a necessidade de criar um novo produto
+create() {
+  this.productService.create(this.req).subscribe(res => {
+    this.router.navigate(['/products'])
+  })
+}
 
 
 ##### 4 - No template de product-create, adicionar card que servirá de container
@@ -56,8 +81,6 @@ Diretiva que permite que elementos nativos, <input> e <textarea>, sejam bem inte
 
 ## name
 Elementos que usam ngModel precisam ter a propriedade 'name' definida
-
-## ()
 
 ## ngModel
 
