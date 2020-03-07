@@ -1,36 +1,4 @@
-##### 1 - Em product-create.component, importar a interface RequestProduct
-import { RequestProduct } from '../product.model';
-
-
-##### 2 - Criar o objeto que irá na requisição
-req: RequestProduct = {
-  name: '',
-  price: null
-}
-
-## Seus valores serão atualizados por meio da técnica two way data binding, que será explicada mais a frente
-
-
-##### 2 - Em product-create.component, importar os serviços de produto e Router   
-import { ProductService } from '../product.service';
-import { Router } from '@angular/router';
-
-## router será necessário para quando, assim que um produto for adicionado, haja uma navegação automática para a tela de homepage do Crud
-
-
-##### 3 - Em product-create.component, injetar serviços de produto e Router
-  constructor(private productService: ProductService, private router: Router) { }
-
-
-##### n - Criar método create, que será chamado sempre que houver a necessidade de criar um novo produto
-create() {
-  this.productService.create(this.req).subscribe(res => {
-    this.router.navigate(['/products'])
-  })
-}
-
-
-##### 4 - No template de product-create, adicionar card que servirá de container
+##### 4 - Em product-create.component.html, adicionar card que servirá de container
 <mat-card class="mat-elevation-z3">
 </mat-card>
 
@@ -49,15 +17,16 @@ create() {
 </mat-card>
 
 
-##### 3 - importar módulo Form field
+##### 3 - Em app.module.ts, importar módulo Form field e módulo Input
 import {MatFormFieldModule} from '@angular/material/form-field';
-
-
-##### 3 - importar módulo Input
 import {MatInputModule} from '@angular/material/input';
 
 
-##### 4 - colocar MatFormFieldModule e MatInputModule na lista de imports
+##### 3 - para ativarmos o recurso two-way databinding mais a frente, precisamos habilitar a diretiva ngModel, que depende do FormsModule do pacote angular/forms, portanto, ainda em app.module.ts, importar:
+import { FormsModule } from '@angular/forms';
+
+
+##### 4 - colocar MatFormFieldModule, MatInputModule e FormsModule na lista de imports
 
 
 ##### 10 - Adicionar campos ao formulário
@@ -82,9 +51,14 @@ Diretiva que permite que elementos nativos, <input> e <textarea>, sejam bem inte
 ## name
 Elementos que usam ngModel precisam ter a propriedade 'name' definida
 
-## ngModel
+## [(ngModel)]
+O recurso two-way databinding é usado sempre que queremos que mudanças no template (view) sejam refletidas no código TypeScript. É um recurso que combinada property binding e event binding, conseguindo, assim manter sincronizados os dados do componente para a view e vice-versa, fazendo com que mudanças sejam refletidas nas duas partes. Essa sincronização dos dados ocorre imediatamente e de forma automática pelo Angular. Sempre que houver alterações no modelo (script), elas serão refletidas na view (template) e, quando acontecer alterações na view, serão refletidas no modelo, garantindo que o template HTML e o código TypeScript estejam atualizados o tempo todo.
+Mais informações:
+https://www.javatpoint.com/two-way-data-binding-in-angular-8
+https://angular.io/api/forms/NgModel
 
 ## [(ngModel)]='req.name'
+Input receberá como valor inicial req.price
 
 
 ##### 11 - Adicionar CSS
@@ -114,10 +88,3 @@ Elementos que usam ngModel precisam ter a propriedade 'name' definida
 button {
     margin: 16px 8px;
 }
-
-
-## - Template completo
-
-
-
-## - CSS completo
