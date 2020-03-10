@@ -18,7 +18,14 @@ navigateToCreateProduct() {
 Ao ser acionada, faz a navegação para o componente product-create
 
 
-##### 4 - No template de product-crud-homepage, adicionar botão que aciona a função navigateToCreateProduct
+##### 4 - importar componentes button
+import {MatButtonModule} from '@angular/material/button';
+
+
+##### 5 - colocar MatButtonModule na lista de imports
+
+
+##### 6 - No template de product-crud-homepage, adicionar botão que aciona a função navigateToCreateProduct
 <button mat-raised-button (click)="navigateToCreateProduct()"> Novo produto </button>
 
 ## ()
@@ -35,8 +42,10 @@ Botão do Angular Material. Aplica estilos e elevação adequados.
 ## navigateToCreateProduct()
 Função previamente definida no script do componente. Será chamada sempre que o evento ocorrer.
 
+## Ao clicar no botão Novo Produto, ocorrerá a navegação para o componente product-create
 
-##### 5 - adicionar CSS
+
+##### 7 - adicionar CSS
 button {
     margin-bottom: 16px;
 }
