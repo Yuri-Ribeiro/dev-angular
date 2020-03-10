@@ -1,15 +1,15 @@
-##### 4 - Em product-create.component.html, adicionar card que servirá de container
+##### 1 - Em product-create.component.html, adicionar card que servirá de container
 <mat-card class="mat-elevation-z3">
 </mat-card>
 
 
-##### 5 - Adicionar título do card
+##### 2 - Adicionar título do card
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Novo produto</mat-card-title>
 </mat-card>
 
 
-##### 9 - Adicionar formulário
+##### 3 - Adicionar formulário
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Novo produto</mat-card-title>
     <form class="product-form">
@@ -17,19 +17,19 @@
 </mat-card>
 
 
-##### 3 - Em app.module.ts, importar módulo Form field e módulo Input
+##### 4 - Em app.module.ts, importar módulo Form field e módulo Input
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 
-##### 3 - para ativarmos o recurso two-way databinding mais a frente, precisamos habilitar a diretiva ngModel, que depende do FormsModule do pacote angular/forms, portanto, ainda em app.module.ts, importar:
+##### 5 - para ativarmos o recurso two-way databinding mais a frente, precisamos habilitar a diretiva ngModel, que depende do FormsModule do pacote angular/forms, portanto, ainda em app.module.ts, importar:
 import { FormsModule } from '@angular/forms';
 
 
-##### 4 - colocar MatFormFieldModule, MatInputModule e FormsModule na lista de imports
+##### 6 - colocar MatFormFieldModule, MatInputModule e FormsModule na lista de imports
 
 
-##### 10 - Adicionar campos ao formulário
+##### 7 - Adicionar campos ao formulário
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Novo produto</mat-card-title>
     <form class="product-form">
@@ -61,7 +61,7 @@ https://angular.io/api/forms/NgModel
 Input receberá como valor inicial req.price
 
 
-##### 11 - Adicionar CSS
+##### 8 - Adicionar CSS
 .product-form {
     min-width: 150px;
     max-width: 500px;
@@ -73,7 +73,7 @@ Input receberá como valor inicial req.price
 }
 
 
-##### 11 - Adicionar botões para salvar e para cancelar
+##### 9 - Adicionar botões para salvar e para cancelar
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Novo produto</mat-card-title>
     <form class="product-form">
@@ -90,7 +90,7 @@ Input receberá como valor inicial req.price
 
 
 
-##### 15 - Adicionar CSS
+##### 10 - Adicionar CSS
 button {
     margin: 16px 8px;
 }
