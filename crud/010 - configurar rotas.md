@@ -39,3 +39,5 @@ const routes: Routes = [
     <i class="material-icons">storefront</i>
     Produtos
 </a>
+
+## Menu lateral já funcionando!
