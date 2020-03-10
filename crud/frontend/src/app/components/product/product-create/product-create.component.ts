@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'crud-product-create',
   templateUrl: './product-create.component.html',
-  styleUrls: ['product-create.component.css']
+  styleUrls: ['./product-create.component.css']
 })
 export class ProductCreateComponent implements OnInit {
 
