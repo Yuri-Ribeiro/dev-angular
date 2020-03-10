@@ -18,8 +18,8 @@
 
 
 ##### 3 - Em app.module.ts, importar módulo Form field e módulo Input
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 ##### 3 - para ativarmos o recurso two-way databinding mais a frente, precisamos habilitar a diretiva ngModel, que depende do FormsModule do pacote angular/forms, portanto, ainda em app.module.ts, importar:
@@ -49,7 +49,7 @@ componente usado para envolver vários componentes do Angular Material que junto
 Diretiva que permite que elementos nativos, <input> e <textarea>, sejam bem integrados a <mat-form-field>.
 
 ## name
-Elementos que usam ngModel precisam ter a propriedade 'name' definida
+Por padrão, elementos que usam ngModel precisam ter a propriedade 'name' definida
 
 ## [(ngModel)]
 O recurso two-way databinding é usado sempre que queremos que mudanças no template (view) sejam refletidas no código TypeScript. É um recurso que combinada property binding e event binding, conseguindo, assim manter sincronizados os dados do componente para a view e vice-versa, fazendo com que mudanças sejam refletidas nas duas partes. Essa sincronização dos dados ocorre imediatamente e de forma automática pelo Angular. Sempre que houver alterações no modelo (script), elas serão refletidas na view (template) e, quando acontecer alterações na view, serão refletidas no modelo, garantindo que o template HTML e o código TypeScript estejam atualizados o tempo todo.
@@ -62,6 +62,12 @@ Input receberá como valor inicial req.price
 
 
 ##### 11 - Adicionar CSS
+.product-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
 .product-form mat-form-field{
     display: block;
 }
@@ -78,7 +84,7 @@ Input receberá como valor inicial req.price
           <input matInput placeholder="Preço (R$)"  name="price" [(ngModel)]='req.price'>
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="save()" color="primary">Salvar</button>
+    <button mat-raised-button (click)="createProduct()" color="primary">Salvar</button>
     <button mat-raised-button (click)="cancel()">Cancelar</button>
 </mat-card>
 
