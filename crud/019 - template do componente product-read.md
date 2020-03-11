@@ -7,10 +7,10 @@ import {MatTableModule} from '@angular/material/table';
 ##### 2 - colocar MatTableModule na lista de imports
 
 
-###### No passo seguinte, 7, será apresentado um erro no console, pois não foram determinadas as colunas a serem renderizadas. Esse erro será corrigido nos passos 8 e 9. 
+###### No passo seguinte, 3, será apresentado um erro no console, pois não foram determinadas as colunas a serem renderizadas. Esse erro será corrigido nos passos 4 e 5. 
 
 
-##### 3 - Em product-read.component.html, adicionar
+##### 3 - Em product-read.component.html, substituir conteúdo por
 <table class="mat-elevation-z3" mat-table [dataSource]="products">
 </table>
 
@@ -38,14 +38,14 @@ Atributo anteriormente definido no arquivo product-read.component.ts
 Mais informações: https://material.angular.io/components/table/overview#3-define-the-row-templates
 
 
-##### 3 - No arquivo product-read.component.ts, criar a seguinte variável
+##### 4 - No arquivo product-read.component.ts, criar a seguinte variável
 displayedColumns: string[] = [];
 
 ## Propriedade displayedColumns
 Array de strings que referencia os identificadores das colunas na ordem desejada pra serem renderizadas. No template, os identificadores serão definidos por meio da propriedade matColumnDef da tag para cada coluna. Por enquanto, esse array estará vazio, já que nenhuma coluna foi definida.
 
 
-##### 4 - Adicionar à tabela os contêiners do header e dos dados
+##### 5 - Adicionar à tabela os contêiners do header e dos dados
 <table class="mat-elevation-z3" mat-table [dataSource]="products">
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -64,7 +64,7 @@ Contêiner do template de linha de dados. Contém a saída das células de dados
 Diretiva estrutural que define a linha de dados. Captura o modelo da linha de dados e suas outras propriedades, como as colunas a serem exibidas. Recebe lista de colunas como entrada.
 
 
-##### 5 - Adicionar CSS
+##### 6 - Adicionar CSS
 table {
     width: 100%;
 }
@@ -76,19 +76,23 @@ table {
 Mais informações: https://material.angular.io/components/table/overview#2-define-the-column-templates
 
 
-##### 6 - Em <table>, adicionar modelo pras colunas ID, nome e preço
-<ng-container matColumnDef="ID">
-    <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let product"> {{product.id}} </td>
-</ng-container>
-<ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Nome </th>
-    <td mat-cell *matCellDef="let product"> {{product.name}} </td>
-</ng-container>
-<ng-container matColumnDef="price">
-    <th mat-header-cell *matHeaderCellDef> Preço </th>
-    <td mat-cell *matCellDef="let product"> {{product.price | currency:'BRL'}} </td>
-</ng-container>
+##### 7 - Em <table>, adicionar modelo pras colunas ID, nome e preço
+<table class="mat-elevation-z3" mat-table [dataSource]="products">
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <ng-container matColumnDef="ID">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let product"> {{product.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let product"> {{product.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Preço </th>
+        <td mat-cell *matCellDef="let product"> {{product.price | currency:'BRL'}} </td>
+    </ng-container>
+</table>
 
 ## ng-container
 Elemento estrutural que não adiciona nenhum conteúdo extra no HTML. Documentação recomenda usar para colunas.
@@ -122,7 +126,12 @@ Mais informações: https://angular.io/guide/pipes
 ## currency:'BRL'
 Indica que a saída desejada é em moeda brasileira
 
-## Ficará:
+
+##### 8 - Adicionar identificadores das novas colunas à variável displayedColumns, ficando
+displayedColumns: string[] = ['ID', 'name', 'price'];
+
+
+##### 9 - Ainda em <table>, adicionar modelo pra coluna de ações, que terá ícones clicáveis para editar e apagar produtos. Ficará
 <table class="mat-elevation-z3" mat-table [dataSource]="products">
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
@@ -138,40 +147,34 @@ Indica que a saída desejada é em moeda brasileira
         <th mat-header-cell *matHeaderCellDef> Preço </th>
         <td mat-cell *matCellDef="let product"> {{product.price | currency:'BRL'}} </td>
     </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Ações </th>
+        <td mat-cell *matCellDef="let product">
+            <a routerLink="">
+                <i class="material-icons">
+                    edit
+                </i>
+            </a>
+            &nbsp;
+            <a routerLink="">
+                <i class="material-icons">
+                    delete
+                </i>
+            </a>
+        </td>
+    </ng-container>
 </table>
 
-
-##### 7 - Adicionar identificadores das novas colunas à variável displayedColumns, ficando
-displayedColumns: string[] = ['ID', 'name', 'price'];
-
-
-##### 8 - Ainda em <table>, adicionar modelo pra coluna de ações, que terá ícones clicáveis para editar e apagar produtos. Ficará
-<ng-container matColumnDef="actions">
-    <th mat-header-cell *matHeaderCellDef> Ações </th>
-    <td mat-cell *matCellDef="let product">
-        <a routerLink="">
-            <i class="material-icons">
-                edit
-            </i>
-        </a>
-        &nbsp;
-        <a routerLink="">
-            <i class="material-icons">
-                delete
-            </i>
-        </a>
-    </td>
-</ng-container>
 
 ## &nbsp;
 Adiciona um espaço sem quebra, utilizado para preencher um espaço vazio (sem conteúdo), dar um espaço entre os ícones.
 
 
-##### 9 - Adicionar identificador da nova coluna à variável displayedColumns, ficando
+##### 10 - Adicionar identificador da nova coluna à variável displayedColumns, ficando
 displayedColumns: string[] = ['ID', 'name', 'price', 'actions'];
 
 
-##### 10 - Adicionar CSS
+##### 11 - Adicionar CSS
 a {
     color: #fff;
     text-decoration: none;
