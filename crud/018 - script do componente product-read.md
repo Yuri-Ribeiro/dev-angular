@@ -8,8 +8,9 @@ ng g c components/product/product-read --skipTests
 <fenix-product-read></fenix-product-read>
 
 
-##### 3 - No arquivo product-read.component, importar a interface Product
+##### 3 - No arquivo product-read.component.ts, importar a interface Product e o serviço de produto
 import { Product } from '../product.model';
+import { ProductService } from '../product.service';
 
 
 ##### 4 - Criar o array de Product, products
@@ -18,15 +19,11 @@ products: Product[]
 ## Seus valores serão atualizados posteriormente por meio da inscrição no serviço read
 
 
-##### 5 - Em product-create.component, importar os serviços de produto e Router   
-import { ProductService } from '../product.service';
-
-
-##### 6 - Em product-create.component.ts, injetar a dependência serviço de produto
+##### 5 - Em product-create.component.ts, injetar a dependência serviço de produto
 constructor(private productService: ProductService) { }
 
 
-##### 7 - No método ngOnInit, adicionar o seguinte escopo:
+##### 6 - No método ngOnInit, adicionar o seguinte escopo:
 ngOnInit() {
     this.productService.read().subscribe(res => {
         this.products = res
@@ -34,8 +31,10 @@ ngOnInit() {
 }
 
 ## ngOnInit
-Método que é carregado depois que o construtor é inicializado
+Método que é carregado depois que o construtor é inicializado.
 Mais informações: https://angular.io/api/core/OnInit#ngOnInit
 
-# res
+## res
 É a resposta recebida, ou seja, o retorno do Observable.
+
+## Nesse momento os produtos já estão sendo carregados, porém não são mostrados ainda no template.
