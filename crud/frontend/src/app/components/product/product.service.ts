@@ -22,7 +22,8 @@ export class ProductService {
   }
   
   readById(id: string): Observable<Product> {
-    return this.http.get<Product>(`${this.baseApiUrl}/${id}`)
+    const url = `${this.baseApiUrl}/${id}`
+    return this.http.get<Product>(url)
   }
   
   showMessage(message): void {
@@ -34,11 +35,13 @@ export class ProductService {
   }
 
   update(id: string, req: RequestProduct): Observable<Product> {
-    return this.http.put<Product>(`${this.baseApiUrl}/${id}`, req)
+    const url = `${this.baseApiUrl}/${id}`
+    return this.http.put<Product>(url, req)
   }
   
   delete(id: string): Observable<any> {
-    return this.http.delete<any>(`${this.baseApiUrl}/${id}`)
+    const url = `${this.baseApiUrl}/${id}`
+    return this.http.delete<any>(url)
   }
 
 }
