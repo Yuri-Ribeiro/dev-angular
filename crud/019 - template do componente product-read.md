@@ -1,46 +1,16 @@
-### Documentação dos componentes table: https://material.angular.io/components/table
-
-##### 1 - criar componente product-read
-ng g c components/product/product-read --skipTests
-
-
-##### 2 - adicionar o seletor de product-read no template de product-crud-homepage, ficando:
-<fenix-product-read></fenix-product-read>
-
-
-###### Para focar na criação da tabela de produtos, trabalharemos com dados estáticos inicialmente. Para isso, será necessário criar uma variável products com dados estáticos.
-
-
-##### 3 - No script de product-read, importar a interface product
-import { Product } from '../product.model';
-
-
-##### 4 - Ainda no script, criar array products com dados para teste
-products: Product[] = [
-    {
-      id: 1,
-      name: "X-Búrguer",
-      price: 10.5
-    },
-    {
-      id: 2,
-      name: "X-Bacon",
-      price: 12.5
-    },
-]
-
-
-##### 5 - importar componentes table
+##### 1 - importar componentes table em app.module.ts
 import {MatTableModule} from '@angular/material/table';
 
+## Documentação dos componentes table: https://material.angular.io/components/table
 
-##### 6 - colocar MatTableModule na lista de imports
+
+##### 2 - colocar MatTableModule na lista de imports
 
 
 ###### No passo seguinte, 7, será apresentado um erro no console, pois não foram determinadas as colunas a serem renderizadas. Esse erro será corrigido nos passos 8 e 9. 
 
 
-##### 7 - No template de product-read, adicionar
+##### 7 - Em product-read.component.html, adicionar
 <table class="mat-elevation-z3" mat-table [dataSource]="products">
 </table>
 
@@ -61,18 +31,18 @@ Com Property Bind funcionaria como esperado:
 Mais informações: https://www.javatpoint.com/property-binding-in-angular-8
 
 ## products
-Atributo anteriormente definido no TypeScript do componente.
+Atributo anteriormente definido no arquivo product-read.component.ts
 
 
-###### Definir modelo de linhas, para informar à tabela quais colunas serão renderizadas no cabeçalho e nas linhas de dados.
+###### Agora serão definidos os modelos de linhas, para informar à tabela quais colunas serão renderizadas no cabeçalho e nas linhas de dados.
 Mais informações: https://material.angular.io/components/table/overview#3-define-the-row-templates
 
 
-##### 8 - Criar, no TypeScript do componente
+##### 8 - No arquivo product-read.component.ts, criar a seguinte variável
 displayedColumns: string[] = [];
 
 ## Propriedade displayedColumns
-Array de strings que referencia os identificadores das colunas na ordem desejada pra serem renderizadas. Os identificadores serão definidos para cada coluna por meio da propriedade matColumnDef. Por enquanto, esse array estará vazio, já que nenhuma coluna foi definida.
+Array de strings que referencia os identificadores das colunas na ordem desejada pra serem renderizadas. No template, os identificadores serão definidos por meio da propriedade matColumnDef da tag para cada coluna. Por enquanto, esse array estará vazio, já que nenhuma coluna foi definida.
 
 
 ##### 9 - Adicionar à tabela os contêiners do header e dos dados
@@ -102,7 +72,7 @@ table {
 ## oculpará toda a largura da área reservada ao conteúdo
 
 
-###### Definir modelos para colunas.
+###### Agora serão definidos o modelos para colunas.
 Mais informações: https://material.angular.io/components/table/overview#2-define-the-column-templates
 
 
@@ -130,7 +100,7 @@ Define um identificador para a coluna. Deve ser exclusivo.
 Contêiner de célula de cabeçalho. Adiciona as classes e a função corretas.
 
 ## *
-O prefixo * já faz Property Bind, dispensando o uso de colchetes, e coloca o conteúdo do elemento em um ng-container. Toda diretiva estrutural deve ter esse prefixo.
+Toda diretiva estrutural deve ter esse prefixo. Com ele, a técnica Property Bind já é realizada, dispensando o uso de colchetes; também coloca o conteúdo do elemento num ng-container.
 Mais informações: https://angular.io/guide/structural-directives#the-asterisk--prefix
 
 ## matHeaderCellDef
@@ -202,55 +172,6 @@ displayedColumns: string[] = ['ID', 'name', 'price', 'actions'];
 
 
 ##### 15 - Adicionar CSS
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-
-
-
-## - Template completo
-<table class="mat-elevation-z3" mat-table [dataSource]="products">
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-	<ng-container matColumnDef="ID">
-		<th mat-header-cell *matHeaderCellDef> ID </th>
-		<td mat-cell *matCellDef="let product"> {{product.id}} </td>
-	</ng-container>
-	<ng-container matColumnDef="name">
-		<th mat-header-cell *matHeaderCellDef> Nome </th>
-		<td mat-cell *matCellDef="let product"> {{product.name}} </td>
-	</ng-container>
-	<ng-container matColumnDef="price">
-		<th mat-header-cell *matHeaderCellDef> Preço </th>
-		<td mat-cell *matCellDef="let product"> {{product.price | currency:'BRL'}} </td>
-	</ng-container>
-	<ng-container matColumnDef="actions">
-		<th mat-header-cell *matHeaderCellDef> Ações </th>
-		<td mat-cell *matCellDef="let product">
-			<a routerLink="/products/update/{{product.id}}">
-				<i class="material-icons">
-					edit
-				</i>
-			</a>
-			&nbsp;
-			<a routerLink="/products/delete/{{product.id}}">
-				<i class="material-icons">
-					delete
-				</i>
-			</a>
-		</td>
-	</ng-container>
-</table>
-
-
-## - CSS completo
-table {
-    width: 100%;
-}
-
 a {
     color: #fff;
     text-decoration: none;
