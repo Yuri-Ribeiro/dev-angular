@@ -1,7 +1,8 @@
-##### 1 - Em product.service.ts, criar método read
-read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseApiUrl)
+##### 1 - Em product.service.ts, criar método delete
+delete(id: string): Observable<any> {
+    const url = `${this.baseApiUrl}/${id}`
+    return this.http.delete<any>(url)
 }
 
-## get
-Função da classe HttpClient do Angular. Essa função faz uma requisição HTTP com o método GET para a URL passada como parâmetro.
+## http.delete
+Função da classe HttpClient do Angular. Essa função faz uma requisição HTTP com o método DELETE para a URL passada como parâmetro.

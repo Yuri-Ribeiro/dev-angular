@@ -1,47 +1,57 @@
-##### 1 - Em product-create.component, importar a interface RequestProduct e os serviços de produto e Router
-import { RequestProduct } from '../product.model';
+##### 1 - Em product-delete.component.ts, importar a interface Product e os serviços de produto, Router e ActivatedRoute
+import { Product } from '../product.model';
 import { ProductService } from '../product.service';
-import { Router } from '@angular/router';
-
-## router será necessário para que, assim que um produto for adicionado, haja uma navegação automática para a tela de homepage do Crud
+import { Router, ActivatedRoute } from '@angular/router';
 
 
-##### 2 - Criar o objeto que irá na requisição
-req: RequestProduct = {
-  name: '',
-  price: null
+##### 2 - Criar o a variável id
+id: string
+
+
+##### 3 - Criar o objeto que representará o produto a ser apagado
+product: Product
+
+## Seu valor será preenchido por meio da inscrição no serviço readById
+
+
+##### 4 - Em product-delete.component.ts, injetar serviços de produto, ActivatedRoute e Router
+constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private router: Router) { }
+
+
+##### 5 - Ainda em product-delete.component.ts, em ngOnInit, adicionar o seguinte código:
+this.id = this.activatedRoute.snapshot.paramMap.get('id')
+
+## Estamos capturando o id presente na URL
+
+
+##### 6 - Ainda em ngOnInit, adicionar:
+this.productService.readById(this.id).subscribe(res => {
+  this.product = res
+})
+
+## Preenchendo o objeto que representa o produto
+
+
+##### 7 - Ainda em product-delete.component.ts, adicionar método deleteProduct
+deleteProduct() {
 }
 
-## Seus valores serão atualizados por meio da técnica two way data binding, que será explicada mais a frente
 
-
-##### 3 - Em product-create.component, injetar serviços de produto e Router
-constructor(private productService: ProductService, private router: Router) { }
-
-
-##### 4 - Ainda em product-create.component, adicionar método createProduct, que será chamado sempre que houver a necessidade de criar um novo produto
-createProduct() {
+##### 8 - No escopo do método deleteProduct, adicionar chamada para o método delete do serviço de produto
+deleteProduct() {
+  this.productService.delete(this.id, this.req).subscribe()
 }
 
 
-##### 5 - No escopo do método create, adicionar chamada para o método create da serviço de produto
-createProduct() {
-  this.productService.create(this.req).subscribe()
-}
-
-## subscribe
-Equivale ao then de uma promise. Faz a inscrição no observable retornado pela função create. Assim, é notificado quando houver uma resposta. Pode, como alternativa, chamar uma função callback passando-se a reposta.
-
-
-##### 6 - Ainda no escopo do método create, adicionar uma função callback que faz a navegação para o componente homepage do crud
-this.productService.create(this.req).subscribe( () => {
+##### 9 - Ainda no escopo do método delete, adicionar uma função callback que faz a navegação para o componente homepage do crud
+this.productService.delete(this.req).subscribe( () => {
   this.router.navigate(['/products'])
 })
 
-## Assim que o produto for criado, haverá uma navegação para a tela de homepage do Crud
+## Assim que o produto for deletado, haverá uma navegação para a tela de homepage do Crud
 
 
-##### 7 - Ainda em product-create.component, adicionar método cancel, que fará a navegação de volta para o componente homepage do crud quando o usuário quiser cancelar a adição de novo produto
+##### 10 - Ainda em product-delete.component.ts, adicionar método cancel
 cancel() {
   this.router.navigate(['/products'])
 }

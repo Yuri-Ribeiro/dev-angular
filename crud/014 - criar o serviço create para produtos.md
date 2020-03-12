@@ -82,7 +82,7 @@ create(req: RequestProduct): Observable<Product> {
   return this.http.post<Product>(this.baseApiUrl, req)
 }
 
-## post
+## http.post
 Função da classe HttpClient do Angular. Essa função faz uma requisição HTTP com o método POST para a URL e objeto da requisição passados como parâmetro.
 
 ## post<Product>

@@ -13,13 +13,13 @@ id: string
 ## Seu valor será o id presente na url, que será capturado mais a frente. É o id do produto que se quer alterar.
 
 
-##### 3 - Criar o objeto que irá na requisição
+##### 3 - Criar o objeto que representará o produto atualmente e o novo que irá na requisição
 req: RequestProduct
 
 ## Seu valor inicial será preenchido com os valores atuais por meio da inscrição no serviço readById, que será feita mais a frente. Posteriormente, poderá ser modificado, para atualização, pela técnica two way data binding
 
 
-##### 4 - Em product-update.component.ts, injetar serviços de produto, Router e ActivatedRoute
+##### 4 - Em product-update.component.ts, injetar serviços de produto, ActivatedRoute e Router
 constructor(private productService: ProductService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
 
@@ -45,7 +45,7 @@ updateProduct() {
 }
 
 
-##### 8 - No escopo do método updateProduct, adicionar chamada para o método update da serviço de produto
+##### 8 - No escopo do método updateProduct, adicionar chamada para o método update do serviço de produto
 updateProduct() {
   this.productService.update(this.id, this.req).subscribe()
 }

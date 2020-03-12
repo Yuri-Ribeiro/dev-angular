@@ -94,6 +94,10 @@ Mais informações: https://material.angular.io/components/table/overview#2-defi
     </ng-container>
 </table>
 
+## {{ }}
+Faz interpolação do valor, ou seja, não irá interpretar como uma string, mas como um atributo que existe no TypeScript do componente, ou seja, em product-read.component.ts.
+Mais informações: https://angular.io/guide/template-syntax#interpolation-
+
 ## ng-container
 Elemento estrutural que não adiciona nenhum conteúdo extra no HTML. Documentação recomenda usar para colunas.
 

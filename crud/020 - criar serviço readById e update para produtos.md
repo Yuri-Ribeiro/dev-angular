@@ -21,5 +21,5 @@ update(id: string, req: RequestProduct): Observable<Product> {
 ## id
 id do produto que será atualizado. Irá na URL.
 
-## put
+## http.put
 Função da classe HttpClient do Angular. Essa função faz uma requisição HTTP com o método PUT para a URL e o objeto da requisição passados como parâmetro.

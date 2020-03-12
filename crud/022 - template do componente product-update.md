@@ -33,24 +33,6 @@ Somente se o objeto req estiver preenchido, ou seja, se já existir um objeto co
     </form>
 </mat-card>
 
-## mat-form-field
-componente usado para envolver vários componentes do Angular Material que juntos representam um campo de formulário. Aplica estilos comuns de campos de texto, como sublinhado, rótulo flutuante e mensagens de dica.
-
-## matInput
-Diretiva que permite que elementos nativos, <input> e <textarea>, sejam bem integrados a <mat-form-field>.
-
-## name
-Por padrão, elementos que usam ngModel precisam ter a propriedade 'name' definida
-
-## [(ngModel)]
-O recurso two-way databinding é usado sempre que queremos que mudanças no template (view) sejam refletidas no código TypeScript. É um recurso que combinada property binding e event binding, conseguindo, assim manter sincronizados os dados do componente para a view e vice-versa, fazendo com que mudanças sejam refletidas nas duas partes. Essa sincronização dos dados ocorre imediatamente e de forma automática pelo Angular. Sempre que houver alterações no modelo (script), elas serão refletidas na view (template) e, quando acontecer alterações na view, serão refletidas no modelo, garantindo que o template HTML e o código TypeScript estejam atualizados o tempo todo.
-Mais informações:
-https://www.javatpoint.com/two-way-data-binding-in-angular-8
-https://angular.io/api/forms/NgModel
-
-## [(ngModel)]='req.name'
-Input receberá como valor inicial req.price
-
 
 ##### 5 - Adicionar CSS
 .product-form {
