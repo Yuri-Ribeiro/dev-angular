@@ -4,8 +4,8 @@
     width: 100%;
 }
 
-.product-full-width {
-    width: 100%;
+.product-form mat-form-field{
+    display: block;
 }
 
 button {

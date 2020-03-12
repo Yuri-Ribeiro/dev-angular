@@ -1,17 +1,15 @@
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Atualizar produto</mat-card-title>
-    <!-- <mat-card-content>
       
-    </mat-card-content> -->
     <form *ngIf="req" class="product-form">
-        <mat-form-field class="product-full-width">
+        <mat-form-field>
           <input matInput placeholder="Nome" name="name" [(ngModel)]='req.name'>
         </mat-form-field>
       
-        <mat-form-field class="product-full-width">
+        <mat-form-field>
           <input matInput placeholder="Preço (R$)"  name="price" [(ngModel)]='req.price'>
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="update()" color="primary">Salvar</button>
+    <button mat-raised-button (click)="updateProduct()" color="primary">Salvar</button>
     <button mat-raised-button (click)="cancel()">Cancelar</button>
 </mat-card>
