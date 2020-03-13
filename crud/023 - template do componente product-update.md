@@ -1,4 +1,4 @@
-##### 1 - Em product-update.component.html, adicionar card que servirá de container
+##### 1 - Em product-update.component.html, substituir conteúdo por card que servirá de container
 <mat-card class="mat-elevation-z3">
 </mat-card>
 
@@ -60,7 +60,6 @@ Somente se o objeto req estiver preenchido, ou seja, se já existir um objeto co
     <button mat-raised-button (click)="updateProduct()" color="primary">Salvar</button>
     <button mat-raised-button (click)="cancel()">Cancelar</button>
 </mat-card>
-
 
 
 ##### 7 - Adicionar CSS

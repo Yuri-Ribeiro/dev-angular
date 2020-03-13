@@ -11,3 +11,11 @@ import { ProductUpdateComponent } from './components/product/product-update/prod
 
 ## :id
 Dois pontos indicam se tratar de um parâmetro na rota. "id" é o identificador desse parâmetro. Esse parâmetro depois poderá ser recuperado por meio do serviço de ActivatedRoute.
+
+
+##### 4 - Em product-read.component.html, no link para editar produto, mudar a rota para "/products/update/{{product.id}}", ficando:
+<a routerLink="/products/update/{{product.id}}">
+    <i class="material-icons">
+        edit
+    </i>
+</a>

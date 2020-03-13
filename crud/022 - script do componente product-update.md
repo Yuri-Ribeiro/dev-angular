@@ -4,19 +4,19 @@ import { ProductService } from '../product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 ## ActivatedRoute
-Será necessário para verificarmos qual é a rota ativa do momento e, assim, conseguirmos extrair o id da URL.
+Será necessário para verificarmos qual é a rota ativa do momento e, assim, conseguirmos extrair o parâmetro "id" presente na URL.
 
 
 ##### 2 - Criar o a variável id
 id: string
 
-## Seu valor será o id presente na url, que será capturado mais a frente. É o id do produto que se quer alterar.
+## É o id do produto que se quer alterar. Seu valor será o id presente na URL, que será capturado mais a frente.
 
 
-##### 3 - Criar o objeto que representará o produto atualmente e o novo que irá na requisição
+##### 3 - Criar o objeto req
 req: RequestProduct
 
-## Seu valor inicial será preenchido com os valores atuais por meio da inscrição no serviço readById, que será feita mais a frente. Posteriormente, poderá ser modificado, para atualização, pela técnica two way data binding
+## Seu valor inicial será preenchido com os valores atuais por meio da inscrição no serviço readById, que será feita mais a frente. Posteriormente, será o novo que irá na requisição, podendo ser modificado pela técnica two way data binding
 
 
 ##### 4 - Em product-update.component.ts, injetar serviços de produto, ActivatedRoute e Router
@@ -37,7 +37,7 @@ this.productService.readById(this.id).subscribe(res => {
   }
 })
 
-## Estamos preenchendo com os valores atuais o objeto que representa o produto, para que, antes de alterá-lo, possamos ver os seus valores atuais na tela de update
+## Estamos preenchendo com os valores atuais o objeto que representa o produto, para que possamos ver os seus valores atuais na tela de update antes de alterá-lo
 
 
 ##### 7 - Ainda em product-update.component.ts, adicionar método updateProduct, que será chamado sempre que houver a necessidade de atualizar um produto

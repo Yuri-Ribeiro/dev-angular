@@ -1,9 +1,9 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "X-Búrguer",
-      "price": 10.5
+      "name": "X-Búrguer Triplo",
+      "price": "20",
+      "id": 1
     },
     {
       "id": 2,
@@ -21,9 +21,9 @@
       "price": "5"
     },
     {
-      "id": 5,
       "name": "Pastel",
-      "price": "3"
+      "price": "2.5",
+      "id": 5
     },
     {
       "id": 6,
