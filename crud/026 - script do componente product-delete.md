@@ -39,12 +39,12 @@ deleteProduct() {
 
 ##### 8 - No escopo do método deleteProduct, adicionar chamada para o método delete do serviço de produto
 deleteProduct() {
-  this.productService.delete(this.id, this.req).subscribe()
+  this.productService.delete(this.id).subscribe()
 }
 
 
 ##### 9 - Ainda no escopo do método delete, adicionar uma função callback que faz a navegação para o componente homepage do crud
-this.productService.delete(this.req).subscribe( () => {
+this.productService.delete(this.id).subscribe( () => {
   this.router.navigate(['/products'])
 })
 

@@ -1,4 +1,4 @@
-##### 1 - Em product-delete.component.html, adicionar card que servirá de container
+##### 1 - Em product-delete.component.html, substituir conteúdo pelo seguinte card que servirá de container
 <mat-card class="mat-elevation-z3">
 </mat-card>
 
@@ -20,7 +20,7 @@
 ##### 4 - Adicionar campos ao formulário
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Deseja apagar esse produto?</mat-card-title>
-    <form class="product-form">
+    <form *ngIf="product" class="product-form">
         <mat-form-field>
             <input matInput placeholder="ID" name="id" value='{{product.id}}' disabled>
           </mat-form-field>
@@ -55,7 +55,7 @@ Valor que é preenchido no input. Deixamos com o valor padrão do objeto product
 ##### 6 - Adicionar botões para apagar e para cancelar
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Deseja apagar esse produto?</mat-card-title>
-    <form class="product-form">
+    <form *ngIf="product" class="product-form">
         <mat-form-field>
             <input matInput placeholder="ID" name="id" value='{{product.id}}' disabled>
           </mat-form-field>

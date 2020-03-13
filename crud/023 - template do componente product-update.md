@@ -1,4 +1,4 @@
-##### 1 - Em product-update.component.html, substituir conteúdo por card que servirá de container
+##### 1 - Em product-update.component.html, substituir conteúdo pelo seguinte card que servirá de container
 <mat-card class="mat-elevation-z3">
 </mat-card>
 
