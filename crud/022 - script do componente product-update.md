@@ -26,7 +26,7 @@ constructor(private productService: ProductService, private activatedRoute: Acti
 ##### 5 - Ainda em product-update.component.ts, em ngOnInit, adicionar o seguinte código:
 this.id = this.activatedRoute.snapshot.paramMap.get('id')
 
-## Nessa parte, estamos usando activatedRoute para capturar o id presente na URL e, assim, atualizarmos a variável local id com esse valor.
+## Nessa parte, estamos usando activatedRoute para capturar o parâmetro id presente na URL e, assim, atualizarmos a variável local id com esse valor.
 
 
 ##### 6 - Ainda em ngOnInit, adicionar:

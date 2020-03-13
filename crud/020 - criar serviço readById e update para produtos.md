@@ -4,7 +4,7 @@ readById(id: string): Observable<Product> {
     return this.http.get<Product>(url)
 }
 
-## Será necessário para a tela de atualização dos dados de um produto, pois será possível ver seus dados atuais.
+## Será necessário para a atualizar e apagar os dados de um produto, pois será possível ver seus dados atuais.
 
 ## id
 id do produto que será buscado. Irá na URL.
