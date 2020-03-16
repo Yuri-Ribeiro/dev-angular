@@ -24,17 +24,17 @@ npm i json-server@0.16.0
 {
 "products": [
     {
-      "id": 2,
+      "id": 1,
       "name": "X-Búrguer",
       "price": 10.5
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "X-Bacon",
       "price": 12.5
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "X-Tudo",
       "price": "14.5"
     }
