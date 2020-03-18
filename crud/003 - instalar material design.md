@@ -3,7 +3,7 @@
 ##### 1 - abrir terminal na pasta frontend e executar o comando
 ng add @angular/material
 
-## Escolher o tema Purple and Green
+##### 2 - Escolher o tema Purple and Green
 
 ## Se perguntar sobre adicionar "HammerJS for gesture recognition", não precisa. Ele fornece recursos de reconhecimento de gestos exigidos por alguns componentes (mat-slide-toggle, mat-slider, matToolTip)
 

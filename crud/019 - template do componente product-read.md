@@ -31,14 +31,14 @@ Com Property Bind funcionaria como esperado:
 Mais informações: https://www.javatpoint.com/property-binding-in-angular-8
 
 ## products
-Atributo anteriormente definido no arquivo product-read.component.ts
+Atributo anteriormente definido Em product-read.component.ts
 
 
 ###### Agora serão definidos os modelos de linhas, para informar à tabela quais colunas serão renderizadas no cabeçalho e nas linhas de dados.
 Mais informações: https://material.angular.io/components/table/overview#3-define-the-row-templates
 
 
-##### 4 - No arquivo product-read.component.ts, criar a seguinte variável
+##### 4 - Em product-read.component.ts, criar a seguinte variável
 displayedColumns: string[] = [];
 
 ## Propriedade displayedColumns

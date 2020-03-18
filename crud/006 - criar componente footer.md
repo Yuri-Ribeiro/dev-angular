@@ -50,28 +50,3 @@ ng g c components/template/footer --skipTests
 strong span {
     color: rgb(227, 94, 107) !important;
 }
-
-
-
-
-
-## - CSS completo
-.footer {
-    position: fixed;
-    bottom: 0;
-}
-
-.footer-message {
-    position: fixed;
-    right: 16px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.material-icons {
-    color: rgb(227, 94, 107) !important;
-    vertical-align: middle;
-}
-
-strong span {
-    color: rgb(227, 94, 107) !important;
-}

@@ -8,7 +8,7 @@ ng g c components/product/product-read --skipTests
 <fenix-product-read></fenix-product-read>
 
 
-##### 3 - No arquivo product-read.component.ts, importar a interface Product e o serviço de produto
+##### 3 - Em product-read.component.ts, importar a interface Product e o serviço de produto
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 

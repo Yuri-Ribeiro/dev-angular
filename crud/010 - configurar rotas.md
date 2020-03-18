@@ -7,7 +7,7 @@
 É nele que os componentes acessados pelas rotas são renderizados. Atua como um espaço reservado que o Angular preenche dinamicamente com base no estado atual das rotas.
 
 
-##### 2 - No arquivo app-routing.module.ts, importar componente home e o componente product-crud-homepage
+##### 2 - Em app-routing.module.ts, importar componente home e o componente product-crud-homepage
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudHomepageComponent } from './views/product-crud-homepage/product-crud-homepage.component';
 

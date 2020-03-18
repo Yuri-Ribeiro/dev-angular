@@ -163,7 +163,7 @@ i {
   </mat-sidenav-content>
 </mat-sidenav-container>
 
-## futuramente, em <mat-sidenav-content>, haverá um componete que será responsável pelas rotas
+## futuramente, em <mat-sidenav-content>, haverá um componente que será responsável pelas rotas
 
 
 ##### 14 - Adicionar CSS

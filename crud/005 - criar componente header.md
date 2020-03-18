@@ -58,6 +58,9 @@ Mais informações: https://material.angular.io/guide/elevation
 
 ## documentação recomenda que coloque cada elemento da toolbar dentro de um span
 
+## routerLink
+É uma diretiva semelhante a href. Deixar sem referência por enquanto.
+
 
 ##### 9 - Adicionar CSS
 #logo {
@@ -79,9 +82,6 @@ Mais informações: https://material.angular.io/guide/elevation
         </a> 
     </span>
 </mat-toolbar>
-
-## routerLink
-É uma diretiva semelhante a href. Deixar sem referência por enquanto.
 
 ## span com classe title-group
 Agrupar link com o ícone que virá a seguir.

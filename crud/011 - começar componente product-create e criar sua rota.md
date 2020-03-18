@@ -2,7 +2,7 @@
 ng g c components/product/product-create --skipTests
 
 
-##### 2 - No arquivo app-routing.module.ts, importar componente product-create
+##### 2 - Em app-routing.module.ts, importar componente product-create
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 

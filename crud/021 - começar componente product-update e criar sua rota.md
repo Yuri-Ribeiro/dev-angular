@@ -2,7 +2,7 @@
 ng g c components/product/product-update --skipTests
 
 
-##### 2 - No arquivo app-routing.module.ts, importar componente product-update
+##### 2 - Em app-routing.module.ts, importar componente product-update
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 

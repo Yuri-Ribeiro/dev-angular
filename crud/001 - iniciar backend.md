@@ -16,7 +16,7 @@ npm i json-server@0.16.0
 ## https://docs.npmjs.com/cli/install
 
 
-##### 5 - no arquivo package.json que está na pasta backend, adicionar o script abaixo. Pode-se apagar o script "test"
+##### 5 - Em package.json que está na pasta backend, adicionar o script abaixo. Pode-se apagar o script "test"
 "start": "json-server --watch db.json --port 3001"
 
 
