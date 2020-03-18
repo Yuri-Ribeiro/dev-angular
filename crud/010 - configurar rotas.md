@@ -23,8 +23,8 @@ const routes: Routes = [
 
 ##### 4 - Definir rota para product-crud-homepage
 const routes: Routes = [
-  {path: "", component: HomeComponent},
-  {path: "products", component: ProductCrudHomepageComponent},
+	{path: "", component: HomeComponent},
+	{path: "products", component: ProductCrudHomepageComponent},
 ];
 
 ## Já dá pra testar colocando /products diretamente na URL

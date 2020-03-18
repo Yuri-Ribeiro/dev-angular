@@ -19,9 +19,6 @@ export class ProductService {
 Decorador que marca uma classe como disponível para ser fornecida e injetada como uma dependência em outras classes. Ou seja, indica que a classe ProductService está pronta para ser injetada em outras classes.
 Mais informações: https://angular.io/api/core/Injectable
 
-## injetar
-Pôr um serviço no construtor de uma classe
-
 ## providedIn: 'root'
 Declara que esse serviço deve ser criado pelo injetor raiz da aplicação.
 Mais informações: https://angular.io/guide/hierarchical-dependency-injection
@@ -54,7 +51,7 @@ import { Observable } from 'rxjs';
 ## Observable será explicado no passo NNNN
 
 
-##### 8 - Importar a interface Product
+##### 8 - Importar a interface Product e RequestProduct
 import { Product, RequestProduct } from './product.model';
 
 
