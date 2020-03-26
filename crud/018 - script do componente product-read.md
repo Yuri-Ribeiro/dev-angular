@@ -19,7 +19,7 @@ products: Product[]
 ## Seus valores serão atualizados posteriormente por meio da inscrição no serviço read
 
 
-##### 5 - Em product-create.component.ts, injetar a dependência serviço de produto
+##### 5 - Em product-read.component.ts, injetar a dependência serviço de produto
 constructor(private productService: ProductService) { }
 
 

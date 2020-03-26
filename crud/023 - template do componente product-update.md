@@ -23,7 +23,7 @@ Somente se o objeto req estiver preenchido, ou seja, se já existir um objeto co
 ##### 4 - Adicionar campos ao formulário
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Atualizar produto</mat-card-title>
-    <form class="product-form">
+    <form *ngIf="req" class="product-form">
         <mat-form-field>
           <input matInput placeholder="Nome" name="name" [(ngModel)]='req.name'>
         </mat-form-field>
@@ -49,7 +49,7 @@ Somente se o objeto req estiver preenchido, ou seja, se já existir um objeto co
 ##### 6 - Adicionar botões para salvar e para cancelar
 <mat-card class="mat-elevation-z3">
     <mat-card-title>Atualizar produto</mat-card-title>
-    <form class="product-form">
+    <form *ngIf="req" class="product-form">
         <mat-form-field>
           <input matInput placeholder="Nome" [(ngModel)]='req.name'>
         </mat-form-field>
