@@ -1,3 +1,6 @@
+---------------- header.service.ts
+
+
 ##### 1 - Criar serviço para header:
 ng g s components/template/header/header
 
@@ -10,7 +13,7 @@ import { HeaderData } from './header.model';
 Essa classe que segue o padrão Observable é ideal para compartilhamento de dados entre componentes, pois com ela podemos alterar em tempo de execução dados compartilhados entre componentes. Reque um valor inicial para os dados. Emite sempre o valor atual para os assinantes. Com isso, conseguimos passar dados entre componentes e também alterar o estado deles conforme estamos passando de um lado para o outro.
 
 
-##### 2 - Ainda em header.service.ts, adicionar a variável headerData e inicializá-la:
+##### 3 - Ainda em header.service.ts, adicionar a variável headerData e inicializá-la:
 headerData = new BehaviorSubject<HeaderData>({
   title: "Fenix",
   iconName: "dashboard",
@@ -40,6 +43,9 @@ setHeader(data: HeaderData) {
 ## Nesse ponto, estamos criando um método para alterar o valor dos dados do cabeçalho. Um novo objeto do tipo HeaderData é recebido como parâmetro em setHeader, que, por meio do método next(), é atribuido para headerData.
 
 
+----------------- header.component.ts
+
+
 ##### 9 - Em header.component.ts, importar o serviço do header, adicionando:
 import {HeaderService} from './header.service';
 
@@ -52,6 +58,9 @@ constructor(private headerService: HeaderService) {
   this.link = link
 }
 
+
+
+----------------- product-crud-homepage.component.ts
 
 
 
@@ -68,6 +77,8 @@ constructor(private router: Router, private headerService: HeaderService) {
   })
 }
 
+
+-------------------- home.component.ts
 
 
 
