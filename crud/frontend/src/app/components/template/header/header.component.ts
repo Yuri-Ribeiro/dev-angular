@@ -7,24 +7,17 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title
-  iconName
-  link
+  title: string
+  iconName: string
+  link: string
   
-  constructor() {
-    this.title = "Fenix",
-    this.iconName = "dashboard",
-    this.link = "/"
+  constructor(private headerService: HeaderService) {
+    let {title, iconName, link} = this.headerService.getHeaderData();
+    this.title = title
+    this.iconName = iconName
+    this.link = link
   }
 
-  ngOnInit() {
-    HeaderService.forwardTheHeader.subscribe(
-      async data => {
-        this.title = await data.title
-        this.iconName = await data.iconName
-        this.link = await data.link
-      }
-    );
-  }
+  ngOnInit() { }
 
 }
