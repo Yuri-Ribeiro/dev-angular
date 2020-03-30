@@ -6,6 +6,9 @@ ng g s components/template/header/header
 import { BehaviorSubject } from 'rxjs';
 import { HeaderData } from './header.model';
 
+## BehaviorSubject
+Essa classe que segue o padrão Observable é ideal para compartilhamento de dados entre componentes, pois com ela podemos alterar em tempo de execução dados compartilhados entre componentes. Reque um valor inicial para os dados. Emite sempre o valor atual para os assinantes. Com isso, conseguimos passar dados entre componentes e também alterar o estado deles conforme estamos passando de um lado para o outro.
+
 
 ##### 2 - Ainda em header.service.ts, adicionar a variável headerData e inicializá-la:
 headerData = new BehaviorSubject<HeaderData>({
@@ -14,17 +17,27 @@ headerData = new BehaviorSubject<HeaderData>({
   link: "/"
 });
 
+## Nesse momento, estamos criando uma instância de BehaviorSubject do tipo HeaderData. Também passamos como parâmetro do construtor de BehaviorSubject um objeto do tipo HeaderData com seus valores iniciais. Esse objeto poderá ser alterado em tempo de execução, de forma que os dados do cabeçalho possam ser alterados.
+
 
 ##### 9 - Ainda em header.service.ts, criar método getHeaderData:
 getHeaderData(): HeaderData{
-    return this.headerData.value
-  }
+  return this.headerData.value
+}
+
+## .value
+
+## O método getHeaderData retorna o valor atual de headerData.
 
 
 ##### 9 - Ainda em header.service.ts, criar método setHeader:
 setHeader(data: HeaderData) {
   this.headerData.next(data)
 }
+
+## .next
+
+## Nesse ponto, estamos criando um método para alterar o valor dos dados do cabeçalho. Um novo objeto do tipo HeaderData é recebido como parâmetro em setHeader, que, por meio do método next(), é atribuido para headerData.
 
 
 ##### 9 - Em header.component.ts, importar o serviço do header, adicionando:
@@ -70,29 +83,3 @@ constructor(private headerService: HeaderService) {
     link: "/"
   })
 }
-
-
-
-
-##### BehaviorSubject
-Requer um valor inicial e emite o valor atual para novos assinantes. Segue o padrão Observable. Com ele nós podemos alterar dados em tempo de execução
-podemos utilizar o BehaviorSubject para compartilhamento de dados entre componentes
-
-##### Referência para Observable<HeaderData>
-
-##### estamos criando um método para alterar o valor do nosso user e notificar todos os outros componentes que assinarem ele.
-
-##### Agora nos componentes Home e About nós temos um código parecido onde estamos importando o nosso Service no construtor e em ngOnInit estamos dando um subscribe em user.
-
-
-##### Bom, com isso nós conseguimos passar dados entre componentes e também podemos alterar o estado deles conforme estamos passando de um lado para o outro.
-
-##### estamos importando o modulo BehaviorSubject.
-
-##### estamos criando uma instancia do module BehaviorSubject e passando como parâmetro a nossa classe user.
-
-##### estamos importando o nosso modulo User, para que possamos alterar ele em tempo de execução.
-
-##### mandaremos um novo valor ao nomeBehaviorSubject através do método next(), para isso, criei o método abaixo, que será acionado pelo template:
-
-##### Também criei um método get musica() para acessar o valor do template. O get nos permitirá acessar musica como se fosse uma variável comum de nosso componente, conforme demonstrado:
