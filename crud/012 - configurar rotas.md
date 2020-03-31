@@ -30,7 +30,33 @@ const routes: Routes = [
 ## Já dá pra testar colocando /products diretamente na URL
 
 
-##### 5 - No template de Nav, definir as rotas corretas para routerLink, ficando:
+##### 5 - Em header.component.html, definir a rota correta para routerLink, ficando:
+<a routerLink="/">
+    <img id="logo" src="assets/img/logo.png">
+</a>
+
+
+##### 6 - Em product-crud-homepage.component.ts, definir a rota correta para o atribudo do cabeçalho routeURL, ficando:
+constructor(private router: Router, private headerService: HeaderService) { 
+  this.headerService.setHeaderData({
+    title: "Produtos",
+    iconName: "storefront",
+    routeURL: "/products"
+  })
+}
+
+
+##### 7 - Em home.component.ts, definir a rota correta para o atribudo do cabeçalho routeURL, ficando:
+constructor(private router: Router, private headerService: HeaderService) { 
+  this.headerService.setHeaderData({
+    title: "Produtos",
+    iconName: "storefront",
+    routeURL: "/"
+  })
+}
+
+
+##### 8 - No template de Nav, definir as rotas corretas para routerLink, ficando:
 <a mat-list-item routerLink="/">
     <i class="material-icons">home</i>
     Início

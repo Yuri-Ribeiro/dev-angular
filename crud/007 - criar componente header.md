@@ -27,7 +27,39 @@ imports: [
 ],
 
 
-##### 5 - Adicionar o toolbar ao template de header, substituindo todo seu conteúdo por:
+##### 5 - Ainda em header.component.ts injetar o serviço do header e criar os getters para os atributos do cabeçalho:
+import { Component, OnInit } from '@angular/core';
+import { HeaderService } from './header.service';
+
+@Component({
+  selector: 'crud-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
+
+    constructor(private headerService: HeaderService) {
+    }
+
+    get title(): string {
+        return this.headerService.getHeaderData().title
+    }
+
+    get iconName(): string {
+        return this.headerService.getHeaderData().iconName
+    }
+
+    get link(): string {
+        return this.headerService.getHeaderData().link
+    }
+
+    ngOnInit() { }
+}
+
+## criamos um método get para acessar cada valor do cabeçalho. Como cada get retorna o valor atual da chamada de .getHeaderData, isso nos permitirá acessar os dados do cabeçalho como se fossem uma variáveis comuns do componente header.
+
+
+##### 6 - Adicionar o toolbar ao template de header, substituindo todo seu conteúdo por:
 <mat-toolbar class="header mat-elevation-z4">
 </mat-toolbar>
 
@@ -36,7 +68,7 @@ Adiciona uma sombra para separar elementos. X é o número da elevação, que va
 Mais informações: https://material.angular.io/guide/elevation
 
 
-##### 6 - Adicionar CSS
+##### 7 - Adicionar CSS
 .header {
     position: fixed;
     background: #3f51b5;
@@ -44,10 +76,10 @@ Mais informações: https://material.angular.io/guide/elevation
 }
 
 
-##### 7 - Colocar na pasta assets/img/ a imagem do seguinte link http://bit.ly/2SU4N7H
+##### 8 - Colocar na pasta assets/img/ a imagem do seguinte link http://bit.ly/2SU4N7H
 
 
-##### 8 - Adicionar logo com link
+##### 9 - Adicionar logo com link
 <mat-toolbar class="header mat-elevation-z4">
     <span>
         <a routerLink="">
@@ -62,14 +94,14 @@ Mais informações: https://material.angular.io/guide/elevation
 É uma diretiva semelhante a href. Deixar sem referência por enquanto.
 
 
-##### 9 - Adicionar CSS
+##### 10 - Adicionar CSS
 #logo {
     display: flex;
     max-height: 32px;
 }
 
 
-##### 10 - Adicionar título com link ao header
+##### 11 - Adicionar título com link ao header
 <mat-toolbar class="header mat-elevation-z4">
     <span>
         <a routerLink="">
@@ -78,7 +110,7 @@ Mais informações: https://material.angular.io/guide/elevation
     </span>
     <span class="title-group">
         <a routerLink="">
-            Fenix App
+            {{title}}
         </a> 
     </span>
 </mat-toolbar>
@@ -87,7 +119,7 @@ Mais informações: https://material.angular.io/guide/elevation
 Agrupar link com o ícone que virá a seguir.
 
 
-##### 11 - Adicionar CSS
+##### 12 - Adicionar CSS
 .title-group {
     margin-left: 28px;
 }
@@ -98,7 +130,7 @@ a {
 }
 
 
-##### 12 - Adicionar um ícone
+##### 13 - Adicionar um ícone
 <mat-toolbar class="header mat-elevation-z4">
     <span>
         <a routerLink="">
@@ -108,9 +140,9 @@ a {
     <span class="title-group">
         <a routerLink="">
             <i class="material-icons">
-                web
+                {{iconName}}
             </i>
-            Fenix App
+            {{title}}
         </a> 
     </span>
 </mat-toolbar>
@@ -123,7 +155,7 @@ Indica que se trata de ícones do material
 Mais ícones: https://material.io/resources/icons
 
 
-##### 13 - Adicionar CSS
+##### 14 - Adicionar CSS
 i {
     margin: auto 4px;
     vertical-align: sub;

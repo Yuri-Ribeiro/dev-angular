@@ -7,15 +7,20 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title: string
-  iconName: string
-  link: string
   
   constructor(private headerService: HeaderService) {
-    let {title, iconName, link} = this.headerService.getHeaderData();
-    this.title = title
-    this.iconName = iconName
-    this.link = link
+  }
+
+  get title(): string {
+    return this.headerService.getHeaderData().title
+  }
+
+  get iconName(): string {
+    return this.headerService.getHeaderData().iconName
+  }
+
+  get link(): string {
+    return this.headerService.getHeaderData().link
   }
 
   ngOnInit() { }
