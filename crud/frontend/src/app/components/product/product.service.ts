@@ -9,9 +9,17 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ProductService {
 
-  constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
   private baseApiUrl = 'http://localhost:3001/products'
+
+  showMessage(message): void {
+    this.snackBar.open(message, 'X', {
+      duration: 3000,
+      horizontalPosition: "right",
+      verticalPosition: "top"
+    });
+  }
 
   create(req: RequestProduct): Observable<Product> {
     return this.http.post<Product>(this.baseApiUrl, req)
@@ -26,13 +34,6 @@ export class ProductService {
     return this.http.get<Product>(url)
   }
   
-  showMessage(message): void {
-    this._snackBar.open(message, 'X', {
-      duration: 3000,
-      horizontalPosition: "right",
-      verticalPosition: "top"
-    });
-  }
 
   update(id: string, req: RequestProduct): Observable<Product> {
     const url = `${this.baseApiUrl}/${id}`

@@ -44,6 +44,11 @@
       "id": 9,
       "name": "Sorvete",
       "price": "4.5"
+    },
+    {
+      "name": "teste",
+      "price": "178",
+      "id": 10
     }
   ]
 }
